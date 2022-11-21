@@ -1,4 +1,6 @@
 import { extendTheme } from '@chakra-ui/react';
+import '@fontsource/rozha-one';
+import '@fontsource/quicksand';
 
 const colors = {
 	color: {
