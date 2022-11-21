@@ -10,13 +10,12 @@ const colors = {
 	},
 };
 
-// const fonts = {
-// 	fonts: {
-// 		open: `'Open Sans', sans-serif`,
-// 		raleway: `'Raleway', sans-serif`,
-// 	},
-// };
+const fonts = {
+	fonts: {
+		primaria: `'Rozha One', regular`,
+	},
+};
 
-const theme = extendTheme({ colors });
+const theme = extendTheme({ colors, fonts });
 
 export default theme;

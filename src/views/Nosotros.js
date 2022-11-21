@@ -9,6 +9,7 @@ const Nosotros = () => {
 			alignItems='center'
 			justifyContent='center'
 			bgColor='color.gris'
+			overflow='hidden'
 		>
 			<Heading color='white'>Nosotros</Heading>
 		</Flex>

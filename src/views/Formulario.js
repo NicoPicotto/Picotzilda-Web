@@ -8,7 +8,8 @@ const Formulario = () => {
 			h='100vh'
 			alignItems='center'
 			justifyContent='center'
-			bgColor='color.gris'
+			bgColor='color.cremita'
+			overflow='hidden'
 		>
 			<Heading color='white'>Confirmá</Heading>
 		</Flex>
