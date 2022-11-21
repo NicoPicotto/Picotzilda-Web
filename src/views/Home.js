@@ -1,7 +1,8 @@
 import React from 'react';
-import { Heading, Flex, Button, Divider } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
+import { Heading, Flex, Button, Divider, Link } from '@chakra-ui/react';
+import { Link as ReachLink } from 'react-router-dom';
 import { ChevronRightIcon } from '@chakra-ui/icons';
+import Timer from '../Components/Timer/Timer';
 
 const Home = () => {
 	return (
@@ -15,7 +16,7 @@ const Home = () => {
 			flexDir='column'
 		>
 			<Flex
-				w='50vw'
+				w='40vw'
 				flexDir='column'
 				justifyContent='center'
 				alignItems='center'
@@ -46,14 +47,15 @@ const Home = () => {
 				>
 					23
 				</Heading>
+				<Timer duration={82 * 24 * 60 * 60 * 1000} />
 			</Flex>
-			<Flex></Flex>
 			<Flex position='absolute' bottom={0} marginBottom={5}>
-				<Link to={'/nosotros'}>
+				<Link to={'/nosotros'} as={ReachLink}>
 					<Button
 						rightIcon={<ChevronRightIcon />}
 						size='sm'
 						color='color.bordo'
+						fontFamily='fonts.secundaria'
 					>
 						Un poco sobre los novixs
 					</Button>
