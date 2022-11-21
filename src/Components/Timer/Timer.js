@@ -1,32 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import { Flex, Text } from '@chakra-ui/react';
 
-const Timer = ({ duration }) => {
-	const [time, setTime] = useState(duration);
+const Timer = ({ deadline }) => {
+	const [days, setDays] = useState(0);
+	const [hours, setHours] = useState(0);
+	const [minutes, setMinutes] = useState(0);
+	const [seconds, setSeconds] = useState(0);
+
+	const getTimeUntil = (deadline) => {
+		const time = Date.parse(deadline) - Date.parse(new Date());
+		setSeconds(Math.floor((time / 1000) % 60));
+		setMinutes(Math.floor((time / 1000 / 60) % 60));
+		setHours(Math.floor((time / (1000 * 60 * 60)) % 24));
+		setDays(Math.floor(time / (1000 * 60 * 60 * 24)));
+	};
 
 	useEffect(() => {
-		setTimeout(() => {
-			setTime(time - 1000);
-		}, 1000);
-	}, [time]);
+		getTimeUntil(deadline);
+	});
 
-	const getFormattedTime = (milliseconds) => {
-		let totalSeconds = parseInt(Math.floor(time / 1000));
-		let totalMinutes = parseInt(Math.floor(totalSeconds / 60));
-		let totalHours = parseInt(Math.floor(totalMinutes / 60));
-		let days = parseInt(Math.floor(totalHours / 24));
+	useEffect(() => {
+		setInterval(() => getTimeUntil(deadline), 1000);
+	}, [deadline]);
 
-		let seconds = parseInt(totalSeconds % 60);
-		let minutes = parseInt(totalMinutes & 60);
-		let hours = parseInt(totalHours % 24);
-
-		return `${days} : ${hours} : ${minutes} : ${seconds}`;
+	const leading0 = (num) => {
+		return num < 10 ? '0' + num : num;
 	};
 
 	return (
 		<Flex>
-			<Text fontSize='lg' fontFamily='fonts.secundaria'>
-				{getFormattedTime(time)}
+			<Text fontFamily='fonts.secundaria' fontSize='lg'>
+				{leading0(days)} : {leading0(hours)} : {leading0(minutes)} :{' '}
+				{leading0(seconds)}
 			</Text>
 		</Flex>
 	);

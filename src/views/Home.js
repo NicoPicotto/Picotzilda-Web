@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Heading, Flex, Button, Divider, Link } from '@chakra-ui/react';
 import { Link as ReachLink } from 'react-router-dom';
 import { ChevronRightIcon } from '@chakra-ui/icons';
-
+import Timer from '../Components/Timer/Timer';
 
 const Home = () => {
+	const [deadline, setDeadline] = useState('2023-02-11T18:00:00-03:00');
+
 	return (
 		<Flex
 			w='100vw'
@@ -47,7 +49,7 @@ const Home = () => {
 				>
 					23
 				</Heading>
-				{/* <Timer duration={82 * 24 * 60 * 60 * 1000} /> */}
+				<Timer deadline={deadline} />
 			</Flex>
 			<Flex position='absolute' bottom={5}>
 				<Link to={'/nosotros'} as={ReachLink}>
