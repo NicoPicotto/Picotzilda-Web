@@ -3,6 +3,7 @@ import { Heading, Flex, Avatar, Button, Link } from '@chakra-ui/react';
 import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons';
 import { BsSpotify } from 'react-icons/bs';
 import { Link as ReachLink } from 'react-router-dom';
+import ModalRocilda from '../Components/ModalRocilda/ModalRocilda';
 
 const Nosotros = () => {
 	return (
@@ -36,6 +37,7 @@ const Nosotros = () => {
 						justifyContent='center'
 						borderRadius={10}
 						marginTop='-45px'
+						flexDir='column'
 					>
 						<Heading
 							marginTop='30px'
@@ -45,6 +47,7 @@ const Nosotros = () => {
 						>
 							Rocilda
 						</Heading>
+						<ModalRocilda />
 					</Flex>
 				</Flex>
 				<Flex
