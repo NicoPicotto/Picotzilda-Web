@@ -2,9 +2,11 @@ import { extendTheme } from '@chakra-ui/react';
 
 const colors = {
 	color: {
-		primario: '#3182CE',
-		secundario: '#2F855A',
-		terciario: '#A0AEC0',
+		gris: '#36384C',
+		bordo: '#613A43',
+		verde: '#849974',
+		rosita: '#E3BAB3',
+		cremita: '#E9DCCD',
 	},
 };
 

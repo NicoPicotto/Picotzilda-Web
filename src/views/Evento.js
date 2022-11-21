@@ -1,9 +1,17 @@
 import React from 'react'
-import { Heading } from '@chakra-ui/react'
+import { Heading, Flex } from '@chakra-ui/react'
 
 const Evento = () => {
   return (
-    <Heading>Evento</Heading>
+    <Flex
+    w='100vw'
+    h='100vh'
+    alignItems='center'
+    justifyContent='center'
+    bgColor='color.verde'
+  >
+    <Heading color='white'>Evento</Heading>
+  </Flex>
   )
 }
 
