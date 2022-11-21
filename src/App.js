@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { ChakraProvider } from '@chakra-ui/react';
+import theme from './styles/theme';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './views/Home';
+import Nosotros from './views/Nosotros';
+import Evento from './views/Evento';
+import Formulario from './views/Formulario';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+	return (
+		<ChakraProvider theme={theme}>
+			<Router>
+				<Routes>
+					<Route path='/' element={<Home />} />
+					<Route path='/nosotros' element={<Nosotros />} />
+					<Route path='/evento' element={<Evento />} />
+					<Route path='/confirma' element={<Formulario />} />
+				</Routes>
+			</Router>
+		</ChakraProvider>
+	);
+};
 
 export default App;
