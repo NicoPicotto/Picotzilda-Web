@@ -2,7 +2,7 @@ import React from 'react';
 import { Heading, Flex, Button, Divider, Link } from '@chakra-ui/react';
 import { Link as ReachLink } from 'react-router-dom';
 import { ChevronRightIcon } from '@chakra-ui/icons';
-import Timer from '../Components/Timer/Timer';
+
 
 const Home = () => {
 	return (
@@ -47,9 +47,9 @@ const Home = () => {
 				>
 					23
 				</Heading>
-				<Timer duration={82 * 24 * 60 * 60 * 1000} />
+				{/* <Timer duration={82 * 24 * 60 * 60 * 1000} /> */}
 			</Flex>
-			<Flex position='absolute' bottom={0} marginBottom={5}>
+			<Flex position='absolute' bottom={5}>
 				<Link to={'/nosotros'} as={ReachLink}>
 					<Button
 						rightIcon={<ChevronRightIcon />}

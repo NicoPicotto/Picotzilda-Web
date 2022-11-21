@@ -12,8 +12,8 @@ const colors = {
 
 const fonts = {
 	fonts: {
-		primaria: `'Rozha One', regular`,
-		secundaria: `'Quicksand', sans-serif`,
+		primaria: `'Rozha One', regular !important`,
+		secundaria: `'Quicksand', sans-serif !important`,
 	},
 };
 

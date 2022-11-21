@@ -98,8 +98,7 @@ const Nosotros = () => {
 			</Flex>
 			<Flex
 				position='absolute'
-				bottom={0}
-				marginBottom={5}
+				bottom={5}
 				justifyContent='space-evenly'
 				w='70%'
 			>
