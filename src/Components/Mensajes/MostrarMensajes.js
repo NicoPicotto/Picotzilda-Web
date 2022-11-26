@@ -10,7 +10,10 @@ const MostrarMensajes = () => {
 
 	useEffect(() => {
 		setLoading(true);
-		const q = query(collection(db, 'mensajes-casorio'), orderBy("fecha", "desc"));
+		const q = query(
+			collection(db, 'mensajes-casorio'),
+			orderBy('fecha', 'desc')
+		);
 		const unsub = onSnapshot(q, (querySnapshot) => {
 			let mjesArray = [];
 			querySnapshot.forEach((doc) => {
@@ -27,9 +30,9 @@ const MostrarMensajes = () => {
 		<Flex
 			flexDir='column'
 			alignItems='center'
-			h='70vh'
+			h='65vh'
 			padding={5}
-			overflow='scroll'
+			overflowY='scroll'
 		>
 			<Flex flexDir='column'>
 				{mensajitos.map((mensaje) => (

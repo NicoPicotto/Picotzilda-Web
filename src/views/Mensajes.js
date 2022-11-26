@@ -17,7 +17,7 @@ const Mensajes = () => {
 		>
 			<MostrarMensajes />
 			<EscribirMensaje />
-			<Flex h='5vh'>
+			<Flex h='10vh' alignItems='center'>
 				<Link to={'/nosotros'} as={ReachLink}>
 					<Button
 						leftIcon={<ChevronLeftIcon />}

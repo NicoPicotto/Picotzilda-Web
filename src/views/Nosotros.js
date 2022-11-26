@@ -16,7 +16,7 @@ const Nosotros = () => {
 			overflow='hidden'
 			flexDir='column'
 		>
-			<Flex position='absolute' top={5}>
+			<Flex h='10vh' alignItems='center'>
 				<Link to={'/mensajes'} as={ReachLink}>
 					<Button
 						rightIcon={<ChatIcon />}
@@ -29,7 +29,7 @@ const Nosotros = () => {
 					</Button>
 				</Link>
 			</Flex>
-			<Flex w='60vw' flexDir='column'>
+			<Flex w='60vw' flexDir='column' h='80vh' justifyContent='center'>
 				<Flex
 					flexDir='column'
 					justifyContent='center'
@@ -107,17 +107,15 @@ const Nosotros = () => {
 						leftIcon={<BsSpotify />}
 						boxShadow='md'
 						w='100%'
+						_focus={{ bgColor: '#1db954', textDecor: 'none' }}
+						_after={{ bgColor: '#1db954', textDecor: 'none' }}
+						_hover={{ bgColor: '#1db954', textDecor: 'none' }}
 					>
 						Ponete a tono ♫
 					</Button>
 				</Link>
 			</Flex>
-			<Flex
-				position='absolute'
-				bottom={5}
-				justifyContent='space-evenly'
-				w='70%'
-			>
+			<Flex h='10vh' alignItems='center' justifyContent='space-evenly' w='70%'>
 				<Link to={'/'} as={ReachLink}>
 					<Button
 						leftIcon={<ChevronLeftIcon />}

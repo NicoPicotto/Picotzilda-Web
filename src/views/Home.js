@@ -17,11 +17,11 @@ const Home = () => {
 			overflow='hidden'
 			flexDir='column'
 		>
-			<Flex position='absolute' top={5}>
+			<Flex h='10vh' alignItems='center'>
 				<Link to={'/mensajes'} as={ReachLink}>
 					<Button
 						rightIcon={<ChatIcon />}
-						boxShadow="md"
+						boxShadow='md'
 						size='sm'
 						color='color.bordo'
 						fontFamily='fonts.secundaria'
@@ -35,6 +35,7 @@ const Home = () => {
 				flexDir='column'
 				justifyContent='center'
 				alignItems='center'
+				h='80vh'
 			>
 				<Heading
 					fontSize='9xl'
@@ -64,14 +65,14 @@ const Home = () => {
 				</Heading>
 				<Timer deadline={deadline} />
 			</Flex>
-			<Flex position='absolute' bottom={5}>
+			<Flex h='10vh' alignItems='center'>
 				<Link to={'/nosotros'} as={ReachLink}>
 					<Button
 						rightIcon={<ChevronRightIcon />}
 						size='sm'
 						color='color.bordo'
 						fontFamily='fonts.secundaria'
-						boxShadow="md"
+						boxShadow='md'
 					>
 						Un poco sobre los novixs
 					</Button>
