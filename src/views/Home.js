@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Heading, Flex, Button, Divider, Link } from '@chakra-ui/react';
 import { Link as ReachLink } from 'react-router-dom';
-import { ChevronRightIcon } from '@chakra-ui/icons';
+import { ChevronRightIcon, ChatIcon } from '@chakra-ui/icons';
 import Timer from '../Components/Timer/Timer';
 
 const Home = () => {
@@ -17,6 +17,19 @@ const Home = () => {
 			overflow='hidden'
 			flexDir='column'
 		>
+			<Flex position='absolute' top={5}>
+				<Link to={'/mensajes'} as={ReachLink}>
+					<Button
+						rightIcon={<ChatIcon />}
+						boxShadow="md"
+						size='sm'
+						color='color.bordo'
+						fontFamily='fonts.secundaria'
+					>
+						Dejanos un mensajito
+					</Button>
+				</Link>
+			</Flex>
 			<Flex
 				w='40vw'
 				flexDir='column'
@@ -58,6 +71,7 @@ const Home = () => {
 						size='sm'
 						color='color.bordo'
 						fontFamily='fonts.secundaria'
+						boxShadow="md"
 					>
 						Un poco sobre los novixs
 					</Button>

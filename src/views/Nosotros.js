@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heading, Flex, Avatar, Button, Link } from '@chakra-ui/react';
-import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons';
+import { ChevronRightIcon, ChevronLeftIcon, ChatIcon } from '@chakra-ui/icons';
 import { BsSpotify } from 'react-icons/bs';
 import { Link as ReachLink } from 'react-router-dom';
 import ModalRocilda from '../Components/ModalRocilda/ModalRocilda';
@@ -16,12 +16,26 @@ const Nosotros = () => {
 			overflow='hidden'
 			flexDir='column'
 		>
+			<Flex position='absolute' top={5}>
+				<Link to={'/mensajes'} as={ReachLink}>
+					<Button
+						rightIcon={<ChatIcon />}
+						boxShadow='md'
+						size='sm'
+						color='color.bordo'
+						fontFamily='fonts.secundaria'
+					>
+						Dejanos un mensajito
+					</Button>
+				</Link>
+			</Flex>
 			<Flex w='60vw' flexDir='column'>
 				<Flex
 					flexDir='column'
 					justifyContent='center'
 					alignItems='center'
 					marginBottom={10}
+					boxShadow='md'
 				>
 					<Avatar
 						h='90px'
@@ -55,6 +69,7 @@ const Nosotros = () => {
 					justifyContent='center'
 					alignItems='center'
 					marginBottom={10}
+					boxShadow='md'
 				>
 					<Avatar
 						h='90px'
@@ -90,6 +105,7 @@ const Nosotros = () => {
 						bgColor='#1db954'
 						color='white'
 						leftIcon={<BsSpotify />}
+						boxShadow='md'
 						w='100%'
 					>
 						Ponete a tono ♫
@@ -106,6 +122,7 @@ const Nosotros = () => {
 					<Button
 						leftIcon={<ChevronLeftIcon />}
 						size='sm'
+						boxShadow='md'
 						color='color.bordo'
 						fontFamily='fonts.secundaria'
 					>
@@ -116,6 +133,7 @@ const Nosotros = () => {
 					<Button
 						rightIcon={<ChevronRightIcon />}
 						size='sm'
+						boxShadow='md'
 						color='color.bordo'
 						fontFamily='fonts.secundaria'
 					>
