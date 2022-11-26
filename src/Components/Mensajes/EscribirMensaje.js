@@ -30,7 +30,6 @@ const EscribirMensaje = () => {
 			alignItems='center'
 			justifyContent='center'
 			h='25vh'
-			padding={2}
 			borderTopWidth={1}
 			borderTopColor='color.cremita'
 		>

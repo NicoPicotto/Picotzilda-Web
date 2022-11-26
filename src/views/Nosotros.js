@@ -16,7 +16,7 @@ const Nosotros = () => {
 			overflow='hidden'
 			flexDir='column'
 		>
-			<Flex h='10vh' alignItems='center'>
+			<Flex h='15vh' alignItems='flex-end'>
 				<Link to={'/mensajes'} as={ReachLink}>
 					<Button
 						rightIcon={<ChatIcon />}
@@ -115,7 +115,7 @@ const Nosotros = () => {
 					</Button>
 				</Link>
 			</Flex>
-			<Flex h='10vh' alignItems='center' justifyContent='space-evenly' w='70%'>
+			<Flex h='15vh' alignItems='flex-start' justifyContent='space-evenly' w='70%'>
 				<Link to={'/'} as={ReachLink}>
 					<Button
 						leftIcon={<ChevronLeftIcon />}

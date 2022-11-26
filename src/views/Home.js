@@ -17,7 +17,7 @@ const Home = () => {
 			overflow='hidden'
 			flexDir='column'
 		>
-			<Flex h='10vh' alignItems='center'>
+			<Flex h='15vh' alignItems='flex-end'>
 				<Link to={'/mensajes'} as={ReachLink}>
 					<Button
 						rightIcon={<ChatIcon />}
@@ -35,7 +35,7 @@ const Home = () => {
 				flexDir='column'
 				justifyContent='center'
 				alignItems='center'
-				h='80vh'
+				h='70vh'
 			>
 				<Heading
 					fontSize='9xl'
@@ -65,7 +65,7 @@ const Home = () => {
 				</Heading>
 				<Timer deadline={deadline} />
 			</Flex>
-			<Flex h='10vh' alignItems='center'>
+			<Flex h='15vh' alignItems='flex-start'>
 				<Link to={'/nosotros'} as={ReachLink}>
 					<Button
 						rightIcon={<ChevronRightIcon />}
