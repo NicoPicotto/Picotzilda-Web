@@ -10,8 +10,9 @@ const Mensaje = ({ nombre, mensaje, fecha }) => {
 			w='70vw'
 			padding={2}
 			margin={2}
+			boxShadow='md'
 		>
-			<Flex alignItems='center' boxShadow="md">
+			<Flex alignItems='center'>
 				<Heading
 					size='sm'
 					marginBottom={1}
