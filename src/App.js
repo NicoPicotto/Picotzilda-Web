@@ -7,6 +7,8 @@ import Home from './views/Home';
 import Nosotros from './views/Nosotros';
 import Evento from './views/Evento';
 import Formulario from './views/Formulario';
+import './App.css';
+import Mensajes from './views/Mensajes';
 
 const App = () => {
 	return (
@@ -17,6 +19,7 @@ const App = () => {
 					<Route path='/nosotros' element={<Nosotros />} />
 					<Route path='/evento' element={<Evento />} />
 					<Route path='/confirma' element={<Formulario />} />
+					<Route path='/mensajes' element={<Mensajes />} />
 				</Routes>
 			</Router>
 		</ChakraProvider>
