@@ -27,12 +27,7 @@ const MostrarMensajes = () => {
 	}, []);
 
 	return (
-		<Flex
-			flexDir='column'
-			alignItems='center'
-			padding={5}
-			overflowY='scroll'
-		>
+		<Flex flexDir='column' alignItems='center' padding={5} overflowY='scroll'>
 			<Flex flexDir='column'>
 				{mensajitos.map((mensaje) => (
 					<Mensaje

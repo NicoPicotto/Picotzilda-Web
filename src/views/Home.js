@@ -17,7 +17,8 @@ const Home = () => {
 			flexDir='column'
 		>
 			<Flex
-				h='5vh'
+				marginTop={5}
+				marginBottom={5}
 				alignItems='flex-end'
 				justifyContent='space-evenly'
 				w='100vw'
@@ -26,7 +27,7 @@ const Home = () => {
 					<Button
 						rightIcon={<ChatIcon />}
 						boxShadow='md'
-						size='sm'
+						size='xs'
 						color='color.bordo'
 						fontFamily='fonts.secundaria'
 					>
@@ -36,7 +37,7 @@ const Home = () => {
 				<Link to={'/nosotros'} as={ReachLink}>
 					<Button
 						rightIcon={<ChevronRightIcon />}
-						size='sm'
+						size='xs'
 						color='color.bordo'
 						fontFamily='fonts.secundaria'
 						boxShadow='md'

@@ -13,10 +13,10 @@ const Mensaje = ({ nombre, mensaje }) => {
 			margin={2}
 			boxShadow='md'
 		>
-			<Flex alignItems='center'>
+			<Flex alignItems='center' padding={1}>
 				<ChatIcon />
 				<Heading
-					size='sm'
+					size='xs'
 					marginBottom={1}
 					marginLeft={2}
 					marginRight={2}

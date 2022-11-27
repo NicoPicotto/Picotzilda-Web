@@ -16,7 +16,8 @@ const Nosotros = () => {
 			flexDir='column'
 		>
 			<Flex
-				h='5vh'
+				marginTop={5}
+				marginBottom={5}
 				alignItems='flex-end'
 				justifyContent='space-evenly'
 				w='100vw'
@@ -25,7 +26,7 @@ const Nosotros = () => {
 					<Button
 						leftIcon={<ChevronLeftIcon />}
 						boxShadow='md'
-						size='sm'
+						size='xs'
 						color='color.bordo'
 						fontFamily='fonts.secundaria'
 					>
@@ -35,7 +36,7 @@ const Nosotros = () => {
 				<Link to={'/evento'} as={ReachLink}>
 					<Button
 						rightIcon={<ChevronRightIcon />}
-						size='sm'
+						size='xs'
 						boxShadow='md'
 						color='color.bordo'
 						fontFamily='fonts.secundaria'
