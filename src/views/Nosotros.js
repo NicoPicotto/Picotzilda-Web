@@ -11,21 +11,36 @@ const Nosotros = () => {
 			w='100vw'
 			h='100vh'
 			alignItems='center'
-			justifyContent='center'
 			bgColor='color.gris'
 			overflow='hidden'
 			flexDir='column'
 		>
-			<Flex h='15vh' alignItems='flex-end'>
-				<Link to={'/mensajes'} as={ReachLink}>
+			<Flex
+				h='5vh'
+				alignItems='flex-end'
+				justifyContent='space-evenly'
+				w='100vw'
+			>
+				<Link to={'/'} as={ReachLink}>
 					<Button
-						rightIcon={<ChatIcon />}
+						leftIcon={<ChevronLeftIcon />}
 						boxShadow='md'
 						size='sm'
 						color='color.bordo'
 						fontFamily='fonts.secundaria'
 					>
-						Dejanos un mensajito
+						Volver
+					</Button>
+				</Link>
+				<Link to={'/evento'} as={ReachLink}>
+					<Button
+						rightIcon={<ChevronRightIcon />}
+						size='sm'
+						boxShadow='md'
+						color='color.bordo'
+						fontFamily='fonts.secundaria'
+					>
+						Sobre el evento
 					</Button>
 				</Link>
 			</Flex>
@@ -112,30 +127,6 @@ const Nosotros = () => {
 						_hover={{ bgColor: '#1db954', textDecor: 'none' }}
 					>
 						Ponete a tono ♫
-					</Button>
-				</Link>
-			</Flex>
-			<Flex h='15vh' alignItems='flex-start' justifyContent='space-evenly' w='70%'>
-				<Link to={'/'} as={ReachLink}>
-					<Button
-						leftIcon={<ChevronLeftIcon />}
-						size='sm'
-						boxShadow='md'
-						color='color.bordo'
-						fontFamily='fonts.secundaria'
-					>
-						Atrás
-					</Button>
-				</Link>
-				<Link to={'/evento'} as={ReachLink}>
-					<Button
-						rightIcon={<ChevronRightIcon />}
-						size='sm'
-						boxShadow='md'
-						color='color.bordo'
-						fontFamily='fonts.secundaria'
-					>
-						Sobre el evento
 					</Button>
 				</Link>
 			</Flex>

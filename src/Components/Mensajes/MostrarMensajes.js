@@ -30,7 +30,6 @@ const MostrarMensajes = () => {
 		<Flex
 			flexDir='column'
 			alignItems='center'
-			h='60vh'
 			padding={5}
 			overflowY='scroll'
 		>

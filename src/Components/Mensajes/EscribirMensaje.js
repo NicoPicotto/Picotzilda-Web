@@ -29,9 +29,10 @@ const EscribirMensaje = () => {
 			bgColor='color.bordo'
 			alignItems='center'
 			justifyContent='center'
-			h='25vh'
-			borderTopWidth={1}
-			borderTopColor='color.cremita'
+			borderBottomWidth={1}
+			marginTop={5}
+			paddingBottom={5}
+			borderBottomColor='color.cremita'
 		>
 			<Input
 				placeholder='Nombre'

@@ -12,12 +12,16 @@ const Home = () => {
 			w='100vw'
 			h='100vh'
 			alignItems='center'
-			justifyContent='center'
 			bgColor='color.cremita'
 			overflow='hidden'
 			flexDir='column'
 		>
-			<Flex h='15vh' alignItems='flex-end'>
+			<Flex
+				h='5vh'
+				alignItems='flex-end'
+				justifyContent='space-evenly'
+				w='100vw'
+			>
 				<Link to={'/mensajes'} as={ReachLink}>
 					<Button
 						rightIcon={<ChatIcon />}
@@ -27,6 +31,17 @@ const Home = () => {
 						fontFamily='fonts.secundaria'
 					>
 						Dejanos un mensajito
+					</Button>
+				</Link>
+				<Link to={'/nosotros'} as={ReachLink}>
+					<Button
+						rightIcon={<ChevronRightIcon />}
+						size='sm'
+						color='color.bordo'
+						fontFamily='fonts.secundaria'
+						boxShadow='md'
+					>
+						¡Contame más!
 					</Button>
 				</Link>
 			</Flex>
@@ -64,19 +79,6 @@ const Home = () => {
 					23
 				</Heading>
 				<Timer deadline={deadline} />
-			</Flex>
-			<Flex h='15vh' alignItems='flex-start'>
-				<Link to={'/nosotros'} as={ReachLink}>
-					<Button
-						rightIcon={<ChevronRightIcon />}
-						size='sm'
-						color='color.bordo'
-						fontFamily='fonts.secundaria'
-						boxShadow='md'
-					>
-						Un poco sobre los novixs
-					</Button>
-				</Link>
 			</Flex>
 		</Flex>
 	);
