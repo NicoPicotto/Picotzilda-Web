@@ -1,11 +1,20 @@
 import React from 'react';
-import { Heading, Flex, Avatar, Button, Link } from '@chakra-ui/react';
+import {
+	Heading,
+	Flex,
+	Avatar,
+	Button,
+	Link,
+	useMediaQuery,
+} from '@chakra-ui/react';
 import { ChevronRightIcon, ChevronLeftIcon, ChatIcon } from '@chakra-ui/icons';
 import { BsSpotify } from 'react-icons/bs';
 import { Link as ReachLink } from 'react-router-dom';
 import ModalRocilda from '../Components/ModalRocilda/ModalRocilda';
 
 const Nosotros = () => {
+	const [isMobile] = useMediaQuery('(max-width: 720px)');
+
 	return (
 		<Flex
 			w='100vw'
@@ -20,7 +29,7 @@ const Nosotros = () => {
 				marginBottom={5}
 				alignItems='flex-end'
 				justifyContent='space-evenly'
-				w='100vw'
+				w={isMobile ? '80vw' : '550px'}
 			>
 				<Link to={'/'} as={ReachLink}>
 					<Button
@@ -45,7 +54,12 @@ const Nosotros = () => {
 					</Button>
 				</Link>
 			</Flex>
-			<Flex w='60vw' flexDir='column' h='80vh' justifyContent='center'>
+			<Flex
+				w={isMobile ? '80vw' : '550px'}
+				flexDir='column'
+				h='80vh'
+				justifyContent='center'
+			>
 				<Flex
 					flexDir='column'
 					justifyContent='center'

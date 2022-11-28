@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { db } from '../../firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import { Flex, Input, Textarea, Button } from '@chakra-ui/react';
+import { Flex, Input, Textarea, Button, useMediaQuery } from '@chakra-ui/react';
 
 const EscribirMensaje = () => {
 	const [nombre, setNombre] = useState('');
 	const [mensaje, setMensaje] = useState('');
+	const [isMobile] = useMediaQuery('(max-width: 720px)');
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -25,7 +26,7 @@ const EscribirMensaje = () => {
 			as='form'
 			onSubmit={handleSubmit}
 			flexDir='column'
-			w='100vw'
+			w={isMobile ? '80vw' : '550px'}
 			bgColor='color.bordo'
 			alignItems='center'
 			justifyContent='center'
@@ -44,7 +45,7 @@ const EscribirMensaje = () => {
 				marginBottom={2}
 				bgColor='white'
 				fontFamily='fonts.secundaria'
-				w='70vw'
+				w={isMobile ? '80vw' : '550px'}
 			/>
 			<Textarea
 				placeholder='Mensaje'
@@ -56,14 +57,14 @@ const EscribirMensaje = () => {
 				marginBottom={2}
 				bgColor='white'
 				fontFamily='fonts.secundaria'
-				w='70vw'
+				w={isMobile ? '80vw' : '550px'}
 			/>
 			<Button
 				bgColor='color.cremita'
 				color='color.bordo'
 				type='submit'
 				fontFamily='fonts.secundaria'
-				w='70vw'
+				w={isMobile ? '80vw' : '550px'}
 				size='sm'
 				borderRadius={5}
 				_focus={{ bgColor: 'color.cremita' }}

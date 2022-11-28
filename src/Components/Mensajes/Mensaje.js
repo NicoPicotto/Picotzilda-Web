@@ -1,14 +1,16 @@
 import React, { useEffect } from 'react';
-import { Flex, Divider, Text, Heading } from '@chakra-ui/react';
+import { Flex, Divider, Text, Heading, useMediaQuery } from '@chakra-ui/react';
 import { ChatIcon } from '@chakra-ui/icons';
 
 const Mensaje = ({ nombre, mensaje }) => {
+	const [isMobile] = useMediaQuery('(max-width: 720px)');
+
 	return (
 		<Flex
 			flexDir='column'
 			bgColor='white'
 			borderRadius={10}
-			w='70vw'
+			w={isMobile ? '80vw' : '550px'}
 			padding={2}
 			margin={2}
 			boxShadow='md'

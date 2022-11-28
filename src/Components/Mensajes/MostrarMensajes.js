@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { collection, query, onSnapshot, orderBy } from 'firebase/firestore';
 import { db } from '../../firebase';
-import { Flex, Spinner } from '@chakra-ui/react';
+import { Flex, Spinner, useMediaQuery } from '@chakra-ui/react';
 import Mensaje from './Mensaje';
 
 const MostrarMensajes = () => {
 	const [mensajitos, setMensajitos] = useState([]);
 	const [loading, setLoading] = useState(false);
+	const [isMobile] = useMediaQuery('(max-width: 1100px)');
 
 	useEffect(() => {
 		setLoading(true);
@@ -27,7 +28,13 @@ const MostrarMensajes = () => {
 	}, []);
 
 	return (
-		<Flex flexDir='column' alignItems='center' padding={5} overflowY='scroll'>
+		<Flex
+			flexDir='column'
+			alignItems='center'
+			padding={5}
+			overflowY='scroll'
+			w={isMobile ? '100vw' : '720px'}
+		>
 			<Flex flexDir='column'>
 				{mensajitos.map((mensaje) => (
 					<Mensaje

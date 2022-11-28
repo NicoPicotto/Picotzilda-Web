@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
-import { Heading, Flex, Button, Divider, Link } from '@chakra-ui/react';
+import {
+	Heading,
+	Flex,
+	Button,
+	Divider,
+	Link,
+	useMediaQuery,
+} from '@chakra-ui/react';
 import { Link as ReachLink } from 'react-router-dom';
 import { ChevronRightIcon, ChatIcon } from '@chakra-ui/icons';
 import Timer from '../Components/Timer/Timer';
 
 const Home = () => {
 	const [deadline, setDeadline] = useState('2023-02-11T18:00:00-03:00');
+
+	const [isMobile] = useMediaQuery('(max-width: 720px)');
 
 	return (
 		<Flex
@@ -21,7 +30,7 @@ const Home = () => {
 				marginBottom={5}
 				alignItems='flex-end'
 				justifyContent='space-evenly'
-				w='100vw'
+				w={isMobile ? '80vw' : '550px'}
 			>
 				<Link to={'/mensajes'} as={ReachLink}>
 					<Button
@@ -47,7 +56,7 @@ const Home = () => {
 				</Link>
 			</Flex>
 			<Flex
-				w='40vw'
+				w={isMobile ? '80vw' : '550px'}
 				flexDir='column'
 				justifyContent='center'
 				alignItems='center'

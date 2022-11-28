@@ -1,11 +1,13 @@
 import React from 'react';
 import EscribirMensaje from '../Components/Mensajes/EscribirMensaje';
-import { Flex, Link, Button } from '@chakra-ui/react';
+import { Flex, Link, Button, useMediaQuery } from '@chakra-ui/react';
 import { Link as ReachLink } from 'react-router-dom';
 import { ChevronRightIcon, ChevronLeftIcon, ChatIcon } from '@chakra-ui/icons';
 import MostrarMensajes from '../Components/Mensajes/MostrarMensajes';
 
 const Mensajes = () => {
+	const [isMobile] = useMediaQuery('(max-width: 720px)');
+
 	return (
 		<Flex
 			w='100vw'
@@ -16,16 +18,17 @@ const Mensajes = () => {
 			flexDir='column'
 		>
 			<Flex
-				h='5vh'
+				marginTop={5}
+				marginBottom={5}
 				alignItems='flex-end'
 				justifyContent='space-evenly'
-				w='100vw'
+				w={isMobile ? '80vw' : '550px'}
 			>
 				<Link to={'/'} as={ReachLink}>
 					<Button
 						leftIcon={<ChevronLeftIcon />}
 						boxShadow='md'
-						size='sm'
+						size='xs'
 						color='color.bordo'
 						fontFamily='fonts.secundaria'
 					>
@@ -35,8 +38,8 @@ const Mensajes = () => {
 				<Link to={'/evento'} as={ReachLink}>
 					<Button
 						rightIcon={<ChevronRightIcon />}
-						size='sm'
 						boxShadow='md'
+						size='xs'
 						color='color.bordo'
 						fontFamily='fonts.secundaria'
 					>
