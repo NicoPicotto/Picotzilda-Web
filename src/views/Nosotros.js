@@ -7,10 +7,9 @@ import {
 	Link,
 	useMediaQuery,
 } from '@chakra-ui/react';
-import { ChevronRightIcon, ChevronLeftIcon, ChatIcon } from '@chakra-ui/icons';
+import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons';
 import { BsSpotify } from 'react-icons/bs';
 import { Link as ReachLink } from 'react-router-dom';
-import ModalRocilda from '../Components/ModalRocilda/ModalRocilda';
 
 const Nosotros = () => {
 	const [isMobile] = useMediaQuery('(max-width: 720px)');
@@ -91,7 +90,6 @@ const Nosotros = () => {
 						>
 							Rocilda
 						</Heading>
-						<ModalRocilda />
 					</Flex>
 				</Flex>
 				<Flex

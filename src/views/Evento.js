@@ -1,22 +1,16 @@
 import React from 'react';
-import {
-	Heading,
-	Flex,
-	Avatar,
-	Button,
-	Link,
-	useMediaQuery,
-} from '@chakra-ui/react';
-import { ChevronRightIcon, ChevronLeftIcon, CheckIcon } from '@chakra-ui/icons';
+import { Flex, Button, Link, useMediaQuery } from '@chakra-ui/react';
+import { ChevronLeftIcon, CheckIcon } from '@chakra-ui/icons';
 import { Link as ReachLink } from 'react-router-dom';
 import {
-	BsCalendar2EventFill,
 	BsFillExclamationCircleFill,
 	BsGeoAltFill,
 	BsCreditCard2BackFill,
 } from 'react-icons/bs';
 import { GiLargeDress } from 'react-icons/gi';
 import { FaCocktail } from 'react-icons/fa';
+import ModalCuando from '../Components/Modales/ModalCuando';
+import ModalDonde from '../Components/Modales/ModalDonde';
 
 const Evento = () => {
 	const [isMobile] = useMediaQuery('(max-width: 720px)');
@@ -67,29 +61,8 @@ const Evento = () => {
 				h='100vh'
 				justifyContent='center'
 			>
-				<Button
-					leftIcon={<BsCalendar2EventFill />}
-					size='md'
-					color='color.bordo'
-					fontFamily='fonts.secundaria'
-					boxShadow='md'
-					marginTop={-10}
-					marginBottom={3}
-					justifyContent={'flex-start'}
-				>
-					¿Cuándo?
-				</Button>
-				<Button
-					leftIcon={<BsGeoAltFill />}
-					size='md'
-					color='color.bordo'
-					fontFamily='fonts.secundaria'
-					boxShadow='md'
-					marginBottom={3}
-					justifyContent={'flex-start'}
-				>
-					¿Dónde?
-				</Button>
+				<ModalCuando />
+				<ModalDonde />
 				<Button
 					leftIcon={<FaCocktail />}
 					size='md'

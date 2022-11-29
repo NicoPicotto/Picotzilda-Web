@@ -40,7 +40,7 @@ const Home = () => {
 						color='color.bordo'
 						fontFamily='fonts.secundaria'
 					>
-						Dejanos un mensajito
+						Dejanos un mensajes
 					</Button>
 				</Link>
 				<Link to={'/evento'} as={ReachLink}>
