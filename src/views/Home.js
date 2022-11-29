@@ -43,7 +43,7 @@ const Home = () => {
 						Dejanos un mensajito
 					</Button>
 				</Link>
-				<Link to={'/nosotros'} as={ReachLink}>
+				<Link to={'/evento'} as={ReachLink}>
 					<Button
 						rightIcon={<ChevronRightIcon />}
 						size='xs'
@@ -56,14 +56,14 @@ const Home = () => {
 				</Link>
 			</Flex>
 			<Flex
-				w={isMobile ? '80vw' : '550px'}
+				w={isMobile ? '60vw' : '550px'}
 				flexDir='column'
 				justifyContent='center'
 				alignItems='center'
 				h='70vh'
 			>
 				<Heading
-					fontSize='9xl'
+					fontSize='8xl'
 					fontFamily='fonts.primaria'
 					color='color.bordo'
 					fontWeight='medium'
@@ -72,7 +72,7 @@ const Home = () => {
 				</Heading>
 				<Divider borderColor='color.bordo' />
 				<Heading
-					fontSize='9xl'
+					fontSize='8xl'
 					fontFamily='fonts.primaria'
 					color='color.bordo'
 					fontWeight='medium'
@@ -81,7 +81,7 @@ const Home = () => {
 				</Heading>
 				<Divider borderColor='color.bordo' />
 				<Heading
-					fontSize='9xl'
+					fontSize='8xl'
 					fontFamily='fonts.primaria'
 					color='color.bordo'
 					fontWeight='medium'

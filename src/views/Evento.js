@@ -1,7 +1,26 @@
 import React from 'react';
-import { Heading, Flex } from '@chakra-ui/react';
+import {
+	Heading,
+	Flex,
+	Avatar,
+	Button,
+	Link,
+	useMediaQuery,
+} from '@chakra-ui/react';
+import { ChevronRightIcon, ChevronLeftIcon, CheckIcon } from '@chakra-ui/icons';
+import { Link as ReachLink } from 'react-router-dom';
+import {
+	BsCalendar2EventFill,
+	BsFillExclamationCircleFill,
+	BsGeoAltFill,
+	BsCreditCard2BackFill,
+} from 'react-icons/bs';
+import { GiLargeDress } from 'react-icons/gi';
+import { FaCocktail } from 'react-icons/fa';
 
 const Evento = () => {
+	const [isMobile] = useMediaQuery('(max-width: 720px)');
+
 	return (
 		<Flex
 			w='100vw'
@@ -10,8 +29,123 @@ const Evento = () => {
 			justifyContent='center'
 			bgColor='color.verde'
 			overflow='hidden'
+			flexDir='column'
 		>
-			<Heading color='white'>Evento</Heading>
+			<Flex
+				marginTop={5}
+				marginBottom={5}
+				alignItems='flex-end'
+				justifyContent='space-evenly'
+				w={isMobile ? '80vw' : '550px'}
+			>
+				<Link to={'/'} as={ReachLink}>
+					<Button
+						leftIcon={<ChevronLeftIcon />}
+						boxShadow='md'
+						size='xs'
+						color='color.bordo'
+						fontFamily='fonts.secundaria'
+					>
+						Volver
+					</Button>
+				</Link>
+				<Link to={'/evento'} as={ReachLink}>
+					<Button
+						rightIcon={<CheckIcon />}
+						size='xs'
+						color='color.bordo'
+						fontFamily='fonts.secundaria'
+						boxShadow='md'
+					>
+						Confirmar asistencia
+					</Button>
+				</Link>
+			</Flex>
+			<Flex
+				w={isMobile ? '80vw' : '550px'}
+				flexDir='column'
+				h='100vh'
+				justifyContent='center'
+			>
+				<Button
+					leftIcon={<BsCalendar2EventFill />}
+					size='md'
+					color='color.bordo'
+					fontFamily='fonts.secundaria'
+					boxShadow='md'
+					marginTop={-10}
+					marginBottom={3}
+					justifyContent={'flex-start'}
+				>
+					¿Cuándo?
+				</Button>
+				<Button
+					leftIcon={<BsGeoAltFill />}
+					size='md'
+					color='color.bordo'
+					fontFamily='fonts.secundaria'
+					boxShadow='md'
+					marginBottom={3}
+					justifyContent={'flex-start'}
+				>
+					¿Dónde?
+				</Button>
+				<Button
+					leftIcon={<FaCocktail />}
+					size='md'
+					color='color.bordo'
+					fontFamily='fonts.secundaria'
+					boxShadow='md'
+					marginBottom={3}
+					justifyContent={'flex-start'}
+				>
+					¿Qué comemos y tomamos?
+				</Button>
+				<Button
+					leftIcon={<GiLargeDress />}
+					size='md'
+					color='color.bordo'
+					fontFamily='fonts.secundaria'
+					boxShadow='md'
+					marginBottom={3}
+					justifyContent={'flex-start'}
+				>
+					¿Qué me pongo?
+				</Button>
+				<Button
+					leftIcon={<BsCreditCard2BackFill />}
+					size='md'
+					color='color.bordo'
+					fontFamily='fonts.secundaria'
+					boxShadow='md'
+					marginBottom={3}
+					justifyContent={'flex-start'}
+				>
+					¿Cuánto duele?
+				</Button>
+				<Button
+					leftIcon={<BsFillExclamationCircleFill />}
+					size='md'
+					color='color.bordo'
+					fontFamily='fonts.secundaria'
+					boxShadow='md'
+					justifyContent={'flex-start'}
+					marginBottom={3}
+				>
+					Más datita importante
+				</Button>
+				<Button
+					leftIcon={<CheckIcon />}
+					size='md'
+					color='white'
+					bgColor={'color.bordo'}
+					fontFamily='fonts.secundaria'
+					boxShadow='md'
+					justifyContent={'flex-start'}
+				>
+					Confirmar asistencia
+				</Button>
+			</Flex>
 		</Flex>
 	);
 };
