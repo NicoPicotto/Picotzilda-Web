@@ -29,7 +29,7 @@ const Timer = ({ deadline }) => {
 
 	return (
 		<Flex>
-			<Text fontFamily='fonts.secundaria' fontSize='lg'>
+			<Text fontFamily='fonts.secundaria' fontSize='lg' color='white' padding={3} lineHeight={1}>
 				{leading0(days)} : {leading0(hours)} : {leading0(minutes)} :{' '}
 				{leading0(seconds)}
 			</Text>

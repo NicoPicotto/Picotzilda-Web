@@ -4,10 +4,9 @@ import {
 	Button,
 	ModalBody,
 	ModalContent,
-	ModalCloseButton,
+	Divider,
 	Modal,
 	useDisclosure,
-	ModalHeader,
 	Text,
 	Flex,
 	AspectRatio,
@@ -41,23 +40,54 @@ const ModalDonde = () => {
 			</Button>
 			<Modal isCentered isOpen={isOpen} onClose={onClose}>
 				{overlay}
-				<ModalContent w='80%'>
-					<ModalHeader
+				<ModalContent
+					w='80%'
+					overflow='hidden'
+					justifyContent='center'
+					alignItems='center'
+				>
+					<Flex
 						fontFamily='fonts.secundaria'
-						fontWeight='black'
-						color='color.bordo'
+						bgColor='color.bordo'
+						color='color.cremita'
+						w='100%'
+						padding={5}
+						justifyContent='center'
 					>
-						¿Dónde?
-					</ModalHeader>
-					<ModalCloseButton />
-					<ModalBody marginBottom={3}>
+						<BsGeoAltFill size={50} />
+					</Flex>
+					<ModalBody padding={5}>
 						<Text
 							fontFamily='fonts.secundaria'
 							fontSize='sm'
 							color='color.gris'
+							textAlign='center'
+							marginBottom={3}
 						>
-							• Las Cortaderas (Entre General Cabrera y General Deheza)
+							Las Cortaderas Club de Campo
 						</Text>
+						<Flex justifyContent='center'>
+							<Divider borderColor='color.bordo' marginBottom={3} w='50%' />
+						</Flex>
+						<Text
+							fontFamily='fonts.secundaria'
+							fontSize='sm'
+							color='color.gris'
+							textAlign='center'
+							marginBottom={3}
+						>
+							Entre General Deheza y General Cabrera
+						</Text>
+						<Flex borderRadius={10} overflow='hidden' boxShadow='md'>
+							<iframe
+								id='gmap_canvas'
+								src='https://maps.google.com/maps?q=Las%20Cortaderas&t=&z=15&ie=UTF8&iwloc=&output=embed'
+								frameborder='0'
+								scrolling='no'
+								marginheight='0'
+								marginwidth='0'
+							></iframe>
+						</Flex>
 					</ModalBody>
 				</ModalContent>
 			</Modal>

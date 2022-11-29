@@ -21,7 +21,7 @@ const Evento = () => {
 			h='100vh'
 			alignItems='center'
 			justifyContent='center'
-			bgColor='color.verde'
+			bgColor='color.gris'
 			overflow='hidden'
 			flexDir='column'
 		>

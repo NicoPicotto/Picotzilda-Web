@@ -21,74 +21,65 @@ const Home = () => {
 			w='100vw'
 			h='100vh'
 			alignItems='center'
-			bgColor='color.cremita'
+			bgColor='color.gris'
 			overflow='hidden'
 			flexDir='column'
 		>
-			<Flex
-				marginTop={5}
-				marginBottom={5}
-				alignItems='flex-end'
-				justifyContent='space-evenly'
-				w={isMobile ? '80vw' : '550px'}
-			>
-				<Link to={'/mensajes'} as={ReachLink}>
-					<Button
-						rightIcon={<ChatIcon />}
-						boxShadow='md'
-						size='xs'
-						color='color.bordo'
-						fontFamily='fonts.secundaria'
-					>
-						Dejanos un mensajes
-					</Button>
-				</Link>
-				<Link to={'/evento'} as={ReachLink}>
-					<Button
-						rightIcon={<ChevronRightIcon />}
-						size='xs'
-						color='color.bordo'
-						fontFamily='fonts.secundaria'
-						boxShadow='md'
-					>
-						¡Contame más!
-					</Button>
-				</Link>
-			</Flex>
 			<Flex
 				w={isMobile ? '60vw' : '550px'}
 				flexDir='column'
 				justifyContent='center'
 				alignItems='center'
-				h='70vh'
+				h='100vh'
 			>
 				<Heading
-					fontSize='8xl'
+					fontSize='9xl'
 					fontFamily='fonts.primaria'
-					color='color.bordo'
+					color='white'
 					fontWeight='medium'
+					lineHeight={1}
 				>
 					11
 				</Heading>
-				<Divider borderColor='color.bordo' />
+
 				<Heading
-					fontSize='8xl'
+					fontSize='9xl'
 					fontFamily='fonts.primaria'
-					color='color.bordo'
+					color='white'
 					fontWeight='medium'
+					lineHeight={1}
 				>
 					02
 				</Heading>
-				<Divider borderColor='color.bordo' />
+
 				<Heading
-					fontSize='8xl'
+					fontSize='9xl'
 					fontFamily='fonts.primaria'
-					color='color.bordo'
+					color='white'
 					fontWeight='medium'
+					lineHeight={1}
 				>
 					23
 				</Heading>
 				<Timer deadline={deadline} />
+				<Flex
+					alignItems='flex-end'
+					justifyContent='space-evenly'
+					w={isMobile ? '80vw' : '550px'}
+					marginTop={10}
+				>
+					<Link to={'/evento'} as={ReachLink}>
+						<Button
+							rightIcon={<ChevronRightIcon />}
+							size='xs'
+							color='color.gris'
+							fontFamily='fonts.secundaria'
+							boxShadow='md'
+						>
+							¡Contame más!
+						</Button>
+					</Link>
+				</Flex>
 			</Flex>
 		</Flex>
 	);

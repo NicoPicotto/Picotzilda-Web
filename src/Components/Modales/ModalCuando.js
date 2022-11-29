@@ -4,13 +4,13 @@ import {
 	Button,
 	ModalBody,
 	ModalContent,
-	ModalCloseButton,
+	Divider,
 	Modal,
 	useDisclosure,
-	ModalHeader,
 	Text,
+	Flex,
 } from '@chakra-ui/react';
-import { BsCalendar2EventFill } from 'react-icons/bs';
+import { BsCalendar2Event } from 'react-icons/bs';
 
 const ModalCuando = () => {
 	const OverlayOne = () => (
@@ -23,7 +23,7 @@ const ModalCuando = () => {
 	return (
 		<>
 			<Button
-				leftIcon={<BsCalendar2EventFill />}
+				leftIcon={<BsCalendar2Event />}
 				size='md'
 				color='color.bordo'
 				fontFamily='fonts.secundaria'
@@ -40,36 +40,54 @@ const ModalCuando = () => {
 			</Button>
 			<Modal isCentered isOpen={isOpen} onClose={onClose}>
 				{overlay}
-				<ModalContent w='80%'>
-					<ModalHeader
+				<ModalContent
+					w='80%'
+					overflow='hidden'
+					justifyContent='center'
+					alignItems='center'
+				>
+					<Flex
 						fontFamily='fonts.secundaria'
-						fontWeight='black'
-						color='color.bordo'
+						bgColor='color.gris'
+						color='white'
+						w='100%'
+						padding={5}
+						justifyContent='center'
 					>
-						¿Cuándo?
-					</ModalHeader>
-					<ModalCloseButton />
-					<ModalBody marginBottom={3}>
+						<BsCalendar2Event size={50} />
+					</Flex>
+					<ModalBody padding={5}>
 						<Text
 							fontFamily='fonts.secundaria'
 							fontSize='sm'
 							color='color.gris'
+							textAlign='center'
+							marginBottom={3}
 						>
-							• Sábado 11 de Febrero del 2023
+							Sábado 11 de Febrero del 2023
 						</Text>
+						<Flex justifyContent='center'>
+							<Divider borderColor='color.bordo' marginBottom={3} w='50%' />
+						</Flex>
 						<Text
 							fontFamily='fonts.secundaria'
 							fontSize='sm'
 							color='color.gris'
+							marginBottom={3}
+							textAlign='center'
 						>
-							• 18:30 hs - Llegada
+							18:30 hs - Llegada
 						</Text>
+						<Flex justifyContent='center'>
+							<Divider borderColor='color.bordo' marginBottom={3} w='50%' />
+						</Flex>
 						<Text
 							fontFamily='fonts.secundaria'
 							fontSize='sm'
 							color='color.gris'
+							textAlign='center'
 						>
-							• 19:00 hs - Civil
+							19:00 hs - Civil
 						</Text>
 					</ModalBody>
 				</ModalContent>
