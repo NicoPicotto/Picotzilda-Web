@@ -4,7 +4,7 @@ import { ChevronLeftIcon, CheckIcon } from '@chakra-ui/icons';
 import { Link as ReachLink } from 'react-router-dom';
 import {
 	BsFillExclamationCircleFill,
-	BsGeoAltFill,
+	BsFillChatFill,
 	BsCreditCard2BackFill,
 } from 'react-icons/bs';
 import { GiLargeDress } from 'react-icons/gi';
@@ -20,41 +20,10 @@ const Evento = () => {
 			w='100vw'
 			h='100vh'
 			alignItems='center'
-			justifyContent='center'
 			bgColor='color.gris'
 			overflow='hidden'
 			flexDir='column'
 		>
-			<Flex
-				marginTop={5}
-				marginBottom={5}
-				alignItems='flex-end'
-				justifyContent='space-evenly'
-				w={isMobile ? '80vw' : '550px'}
-			>
-				<Link to={'/'} as={ReachLink}>
-					<Button
-						leftIcon={<ChevronLeftIcon />}
-						boxShadow='md'
-						size='xs'
-						color='color.bordo'
-						fontFamily='fonts.secundaria'
-					>
-						Volver
-					</Button>
-				</Link>
-				<Link to={'/evento'} as={ReachLink}>
-					<Button
-						rightIcon={<CheckIcon />}
-						size='xs'
-						color='color.bordo'
-						fontFamily='fonts.secundaria'
-						boxShadow='md'
-					>
-						Confirmar asistencia
-					</Button>
-				</Link>
-			</Flex>
 			<Flex
 				w={isMobile ? '80vw' : '550px'}
 				flexDir='column'
@@ -66,7 +35,7 @@ const Evento = () => {
 				<Button
 					leftIcon={<FaCocktail />}
 					size='md'
-					color='color.bordo'
+					color='color.gris'
 					fontFamily='fonts.secundaria'
 					boxShadow='md'
 					marginBottom={3}
@@ -77,7 +46,7 @@ const Evento = () => {
 				<Button
 					leftIcon={<GiLargeDress />}
 					size='md'
-					color='color.bordo'
+					color='color.gris'
 					fontFamily='fonts.secundaria'
 					boxShadow='md'
 					marginBottom={3}
@@ -88,7 +57,7 @@ const Evento = () => {
 				<Button
 					leftIcon={<BsCreditCard2BackFill />}
 					size='md'
-					color='color.bordo'
+					color='color.gris'
 					fontFamily='fonts.secundaria'
 					boxShadow='md'
 					marginBottom={3}
@@ -99,25 +68,52 @@ const Evento = () => {
 				<Button
 					leftIcon={<BsFillExclamationCircleFill />}
 					size='md'
-					color='color.bordo'
+					color='color.gris'
 					fontFamily='fonts.secundaria'
 					boxShadow='md'
-					justifyContent={'flex-start'}
+					justifyContent='flex-start'
 					marginBottom={3}
 				>
 					Más datita importante
 				</Button>
+				<Link to={'/mensajes'} as={ReachLink}>
+					<Button
+						leftIcon={<BsFillChatFill />}
+						w='100%'
+						size='md'
+						color='color.gris'
+						fontFamily='fonts.secundaria'
+						boxShadow='md'
+						justifyContent='flex-start'
+						marginBottom={3}
+					>
+						Quiero dejar un mensaje
+					</Button>
+				</Link>
 				<Button
 					leftIcon={<CheckIcon />}
 					size='md'
 					color='white'
-					bgColor={'color.bordo'}
+					bgColor='color.verde'
 					fontFamily='fonts.secundaria'
 					boxShadow='md'
-					justifyContent={'flex-start'}
+					justifyContent='flex-start'
 				>
 					Confirmar asistencia
 				</Button>
+				<Flex justifyContent='center' marginTop={5}>
+					<Link to={'/'} as={ReachLink}>
+						<Button
+							leftIcon={<ChevronLeftIcon />}
+							size='sm'
+							color='color.gris'
+							fontFamily='fonts.secundaria'
+							boxShadow='md'
+						>
+							Volver
+						</Button>
+					</Link>
+				</Flex>
 			</Flex>
 		</Flex>
 	);

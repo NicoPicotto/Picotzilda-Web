@@ -62,21 +62,16 @@ const Home = () => {
 					23
 				</Heading>
 				<Timer deadline={deadline} />
-				<Flex
-					alignItems='flex-end'
-					justifyContent='space-evenly'
-					w={isMobile ? '80vw' : '550px'}
-					marginTop={10}
-				>
+				<Flex justifyContent='center' marginTop={5}>
 					<Link to={'/evento'} as={ReachLink}>
 						<Button
 							rightIcon={<ChevronRightIcon />}
-							size='xs'
+							size='sm'
 							color='color.gris'
 							fontFamily='fonts.secundaria'
 							boxShadow='md'
 						>
-							¡Contame más!
+							ENTRAR
 						</Button>
 					</Link>
 				</Flex>

@@ -12,6 +12,7 @@ import {
 	AspectRatio,
 } from '@chakra-ui/react';
 import { BsGeoAltFill } from 'react-icons/bs';
+import {CiLocationOn} from "react-icons/ci"
 
 const ModalDonde = () => {
 	const OverlayOne = () => (
@@ -26,7 +27,7 @@ const ModalDonde = () => {
 			<Button
 				leftIcon={<BsGeoAltFill />}
 				size='md'
-				color='color.bordo'
+				color='color.gris'
 				fontFamily='fonts.secundaria'
 				boxShadow='md'
 				marginBottom={3}
@@ -48,13 +49,13 @@ const ModalDonde = () => {
 				>
 					<Flex
 						fontFamily='fonts.secundaria'
-						bgColor='color.bordo'
-						color='color.cremita'
+						bgColor='color.gris'
+						color='white'
 						w='100%'
 						padding={5}
 						justifyContent='center'
 					>
-						<BsGeoAltFill size={50} />
+						<CiLocationOn size={60} />
 					</Flex>
 					<ModalBody padding={5}>
 						<Text
@@ -67,7 +68,12 @@ const ModalDonde = () => {
 							Las Cortaderas Club de Campo
 						</Text>
 						<Flex justifyContent='center'>
-							<Divider borderColor='color.bordo' marginBottom={3} w='50%' />
+							<Divider
+								borderColor='color.gris'
+								opacity={0.3}
+								marginBottom={3}
+								w='50%'
+							/>
 						</Flex>
 						<Text
 							fontFamily='fonts.secundaria'
@@ -78,14 +84,29 @@ const ModalDonde = () => {
 						>
 							Entre General Deheza y General Cabrera
 						</Text>
-						<Flex borderRadius={10} overflow='hidden' boxShadow='md'>
+						<Flex justifyContent='center'>
+							<Divider
+								borderColor='color.gris'
+								opacity={0.3}
+								marginBottom={3}
+								w='50%'
+							/>
+						</Flex>
+						<Flex
+							borderRadius={10}
+							overflow='hidden'
+							boxShadow='md'
+							justifyContent='center'
+							alignItems='center'
+							w='100%'
+						>
 							<iframe
-								id='gmap_canvas'
 								src='https://maps.google.com/maps?q=Las%20Cortaderas&t=&z=15&ie=UTF8&iwloc=&output=embed'
 								frameborder='0'
 								scrolling='no'
 								marginheight='0'
 								marginwidth='0'
+								width='100%'
 							></iframe>
 						</Flex>
 					</ModalBody>

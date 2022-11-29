@@ -10,7 +10,7 @@ import {
 	Text,
 	Flex,
 } from '@chakra-ui/react';
-import { BsCalendar2Event } from 'react-icons/bs';
+import { BsCalendar2Event, BsFillCalendarEventFill } from 'react-icons/bs';
 
 const ModalCuando = () => {
 	const OverlayOne = () => (
@@ -23,9 +23,9 @@ const ModalCuando = () => {
 	return (
 		<>
 			<Button
-				leftIcon={<BsCalendar2Event />}
+				leftIcon={<BsFillCalendarEventFill />}
 				size='md'
-				color='color.bordo'
+				color='color.gris'
 				fontFamily='fonts.secundaria'
 				boxShadow='md'
 				marginTop={-10}
@@ -67,7 +67,12 @@ const ModalCuando = () => {
 							Sábado 11 de Febrero del 2023
 						</Text>
 						<Flex justifyContent='center'>
-							<Divider borderColor='color.bordo' marginBottom={3} w='50%' />
+							<Divider
+								borderColor='color.gris'
+								opacity={0.3}
+								marginBottom={3}
+								w='50%'
+							/>
 						</Flex>
 						<Text
 							fontFamily='fonts.secundaria'
@@ -79,7 +84,12 @@ const ModalCuando = () => {
 							18:30 hs - Llegada
 						</Text>
 						<Flex justifyContent='center'>
-							<Divider borderColor='color.bordo' marginBottom={3} w='50%' />
+							<Divider
+								borderColor='color.gris'
+								opacity={0.3}
+								marginBottom={3}
+								w='50%'
+							/>
 						</Flex>
 						<Text
 							fontFamily='fonts.secundaria'

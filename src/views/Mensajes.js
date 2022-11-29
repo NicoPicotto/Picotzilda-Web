@@ -13,18 +13,12 @@ const Mensajes = () => {
 			w='100vw'
 			h='100vh'
 			alignItems='center'
-			bgColor='color.bordo'
+			bgColor='color.gris'
 			overflow='hidden'
 			flexDir='column'
 		>
-			<Flex
-				marginTop={5}
-				marginBottom={5}
-				alignItems='flex-end'
-				justifyContent='space-evenly'
-				w={isMobile ? '80vw' : '550px'}
-			>
-				<Link to={'/'} as={ReachLink}>
+			<Flex marginTop={5}>
+				<Link to={'/evento'} as={ReachLink}>
 					<Button
 						leftIcon={<ChevronLeftIcon />}
 						boxShadow='md'
@@ -33,17 +27,6 @@ const Mensajes = () => {
 						fontFamily='fonts.secundaria'
 					>
 						Volver
-					</Button>
-				</Link>
-				<Link to={'/evento'} as={ReachLink}>
-					<Button
-						rightIcon={<ChevronRightIcon />}
-						boxShadow='md'
-						size='xs'
-						color='color.bordo'
-						fontFamily='fonts.secundaria'
-					>
-						Sobre el evento
 					</Button>
 				</Link>
 			</Flex>

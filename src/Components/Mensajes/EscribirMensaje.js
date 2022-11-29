@@ -27,7 +27,6 @@ const EscribirMensaje = () => {
 			onSubmit={handleSubmit}
 			flexDir='column'
 			w={isMobile ? '80vw' : '550px'}
-			bgColor='color.bordo'
 			alignItems='center'
 			justifyContent='center'
 			borderBottomWidth={1}
@@ -60,15 +59,15 @@ const EscribirMensaje = () => {
 				w={isMobile ? '80vw' : '550px'}
 			/>
 			<Button
-				bgColor='color.cremita'
-				color='color.bordo'
+				bgColor='white'
+				color='color.gris'
 				type='submit'
 				fontFamily='fonts.secundaria'
 				w={isMobile ? '80vw' : '550px'}
 				size='sm'
 				borderRadius={5}
-				_focus={{ bgColor: 'color.cremita' }}
-				_after={{ bgColor: 'color.cremita' }}
+				_focus={{ bgColor: 'white' }}
+				_after={{ bgColor: 'white' }}
 			>
 				¡Añadir mensajito!
 			</Button>
