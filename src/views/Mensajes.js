@@ -2,7 +2,7 @@ import React from 'react';
 import EscribirMensaje from '../Components/Mensajes/EscribirMensaje';
 import { Flex, Link, Button, useMediaQuery } from '@chakra-ui/react';
 import { Link as ReachLink } from 'react-router-dom';
-import { ChevronRightIcon, ChevronLeftIcon, ChatIcon } from '@chakra-ui/icons';
+import { ChevronLeftIcon } from '@chakra-ui/icons';
 import MostrarMensajes from '../Components/Mensajes/MostrarMensajes';
 
 const Mensajes = () => {

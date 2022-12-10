@@ -3,12 +3,11 @@ import {
 	Heading,
 	Flex,
 	Button,
-	Divider,
 	Link,
 	useMediaQuery,
 } from '@chakra-ui/react';
 import { Link as ReachLink } from 'react-router-dom';
-import { ChevronRightIcon, ChatIcon } from '@chakra-ui/icons';
+import { ChevronRightIcon} from '@chakra-ui/icons';
 import Timer from '../Components/Timer/Timer';
 
 const Home = () => {
