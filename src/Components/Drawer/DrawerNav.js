@@ -20,21 +20,29 @@ const DrawerNav = () => {
 				onClick={onOpen}
 				position='fixed'
 				margin={3}
-				bgColor='transparent'
+				bgColor='color.cremita'
 			>
 				<HamburgerIcon color='color.gris' />
 			</Button>
 			<Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
 				<DrawerOverlay />
 				<DrawerContent>
-					<DrawerBody alignItems='center'>
-						<Heading fontFamily='fonts.secundaria'>INICIO</Heading>
-						<Heading fontFamily='fonts.secundaria'>NOSOTROS</Heading>
-						<Heading fontFamily='fonts.secundaria'>EL EVENTO</Heading>
-						<Heading fontFamily='fonts.secundaria'>
+					<DrawerBody alignItems='center' bgColor='color.gris'>
+						<Heading fontSize='2xl' fontFamily='fonts.secundaria' color='white'>
+							INICIO
+						</Heading>
+						<Heading fontSize='2xl' fontFamily='fonts.secundaria' color='white'>
+							NOSOTROS
+						</Heading>
+						<Heading fontSize='2xl' fontFamily='fonts.secundaria' color='white'>
+							EL EVENTO
+						</Heading>
+						<Heading fontSize='2xl' fontFamily='fonts.secundaria' color='white'>
 							CONFIRMÁ TU ASISTENCIA
 						</Heading>
-						<Heading fontFamily='fonts.secundaria'>MENSAJITOS</Heading>
+						<Heading fontSize='2xl' fontFamily='fonts.secundaria' color='white'>
+							MENSAJITOS
+						</Heading>
 					</DrawerBody>
 				</DrawerContent>
 			</Drawer>

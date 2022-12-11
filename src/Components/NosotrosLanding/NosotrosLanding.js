@@ -16,14 +16,10 @@ const NosotrosLanding = () => {
 		<Flex
 			h='100vh'
 			alignItems='center'
-			bgColor='color.gris'
 			overflow='hidden'
 			flexDir='column'
-			bgImage='/assets/back1.jpg'
-			bgRepeat='no-repeat'
-			bgSize='cover'
-			bgPos='center'
-			justifyContent="center"
+			justifyContent='center'
+			bgColor='color.gris'
 		>
 			<Flex
 				w={isMobile ? '100vw' : '70vw'}

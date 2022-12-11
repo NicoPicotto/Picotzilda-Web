@@ -8,7 +8,7 @@ const colors = {
 		bordo: '#613A43',
 		verde: '#849974',
 		rosita: '#E3BAB3',
-		cremita: '#E9DCCD',
+		cremita: '#F8F9F0',
 	},
 };
 

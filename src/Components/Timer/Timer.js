@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Flex, Text } from '@chakra-ui/react';
+import { Flex, Heading } from '@chakra-ui/react';
 
 const Timer = ({ deadline }) => {
 	const [days, setDays] = useState(0);
@@ -29,10 +29,17 @@ const Timer = ({ deadline }) => {
 
 	return (
 		<Flex>
-			<Text fontFamily='fonts.secundaria' fontSize='lg' color='white' padding={3} lineHeight={1}>
+			<Heading
+				fontFamily='fonts.secundaria'
+				fontWeight='medium'
+				fontSize='xl'
+				color='color.gris'
+				padding={3}
+				lineHeight={1}
+			>
 				{leading0(days)} : {leading0(hours)} : {leading0(minutes)} :{' '}
 				{leading0(seconds)}
-			</Text>
+			</Heading>
 		</Flex>
 	);
 };

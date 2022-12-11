@@ -17,16 +17,12 @@ const EventoLanding = () => {
 
 	return (
 		<Flex
-        h='100vh'
-        alignItems='center'
-        bgColor='color.gris'
-        overflow='hidden'
-        flexDir='column'
-        bgImage='/assets/back1.jpg'
-        bgRepeat='no-repeat'
-        bgSize='cover'
-        bgPos='center'
-        justifyContent="center"
+			h='100vh'
+			alignItems='center'
+			overflow='hidden'
+			flexDir='column'
+			justifyContent='center'
+			bgColor='#F8F9F0'
 		>
 			<Flex
 				w={isMobile ? '80vw' : '550px'}

@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-import {
-	Heading,
-	Flex,
-	useMediaQuery,
-} from '@chakra-ui/react';
+import { Heading, Flex, useMediaQuery, Divider, Image } from '@chakra-ui/react';
 import Timer from '../Timer/Timer';
 
 const HomeLanding = () => {
@@ -13,53 +9,53 @@ const HomeLanding = () => {
 
 	return (
 		<Flex
-
 			h='100vh'
 			alignItems='center'
 			overflow='hidden'
 			flexDir='column'
-			bgImage='/assets/back1.jpg'
-			bgRepeat='no-repeat'
-			bgSize='cover'
-			bgPos='center'
-			justifyContent="center"
+			justifyContent='center'
+			bgColor='color.cremita'
 		>
 			<Flex
-				w={isMobile ? '60vw' : '550px'}
-				flexDir={isMobile ? 'column' : 'row'}
+				padding={10}
+				flexDir='column'
 				justifyContent='center'
 				alignItems='center'
-				h='100vh'
 			>
-				<Heading
-					fontSize='9xl'
-					fontFamily='fonts.primaria'
-					color='white'
-					fontWeight='medium'
-					lineHeight={1}
-				>
-					11
+				<Flex
+					w={isMobile ? '80vw' : '40vw'}
+					h='20vh'
+					overflow='hidden'
+					backgroundImage='/assets/back1.jpg'
+					backgroundSize='100%'
+					borderRadius={5}
+				/>
+				<Heading fontFamily='fonts.primaria' fontWeight='medium'>
+					Nico & Ro
 				</Heading>
-				<Heading
-					fontSize='9xl'
-					fontFamily='fonts.primaria'
-					color='white'
-					fontWeight='medium'
-					lineHeight={1}
-				>
-					02
+				<Flex
+					w={isMobile ? '80vw' : '40vw'}
+					h='20vh'
+					overflow='hidden'
+					backgroundImage='/assets/back1.jpg'
+					backgroundSize='100%'
+					borderRadius={5}
+				/>
+				<Heading fontFamily='fonts.primaria' fontWeight='medium'>
+					11 | 02 | 23
 				</Heading>
-
-				<Heading
-					fontSize='9xl'
-					fontFamily='fonts.primaria'
-					color='white'
-					fontWeight='medium'
-					lineHeight={1}
-				>
-					23
-				</Heading>
-				<Timer deadline={deadline} />
+				<Flex
+					w={isMobile ? '80vw' : '40vw'}
+					h='20vh'
+					overflow='hidden'
+					backgroundImage='/assets/back1.jpg'
+					backgroundSize='100%'
+					borderRadius={5}
+					marginBottom={5}
+				/>
+				<Flex>
+					<Timer deadline={deadline} />
+				</Flex>
 			</Flex>
 		</Flex>
 	);
