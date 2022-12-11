@@ -7,69 +7,42 @@ import {
 	Link,
 	useMediaQuery,
 } from '@chakra-ui/react';
-import { ChevronRightIcon, ChevronLeftIcon } from '@chakra-ui/icons';
 import { BsSpotify } from 'react-icons/bs';
-import { Link as ReachLink } from 'react-router-dom';
 
-const Nosotros = () => {
+const NosotrosLanding = () => {
 	const [isMobile] = useMediaQuery('(max-width: 720px)');
 
 	return (
 		<Flex
-			w='100vw'
 			h='100vh'
 			alignItems='center'
 			bgColor='color.gris'
 			overflow='hidden'
 			flexDir='column'
+			bgImage='/assets/back1.jpg'
+			bgRepeat='no-repeat'
+			bgSize='cover'
+			bgPos='center'
+			justifyContent="center"
 		>
 			<Flex
-				marginTop={5}
-				marginBottom={5}
-				alignItems='flex-end'
-				justifyContent='space-evenly'
-				w={isMobile ? '80vw' : '550px'}
-			>
-				<Link to={'/'} as={ReachLink}>
-					<Button
-						leftIcon={<ChevronLeftIcon />}
-						boxShadow='md'
-						size='xs'
-						color='color.bordo'
-						fontFamily='fonts.secundaria'
-					>
-						Volver
-					</Button>
-				</Link>
-				<Link to={'/evento'} as={ReachLink}>
-					<Button
-						rightIcon={<ChevronRightIcon />}
-						size='xs'
-						boxShadow='md'
-						color='color.bordo'
-						fontFamily='fonts.secundaria'
-					>
-						Sobre el evento
-					</Button>
-				</Link>
-			</Flex>
-			<Flex
-				w={isMobile ? '80vw' : '550px'}
-				flexDir='column'
+				w={isMobile ? '100vw' : '70vw'}
+				flexDir={isMobile ? 'column' : 'row'}
 				h='80vh'
-				justifyContent='center'
+				justifyContent={isMobile ? 'center' : 'space-evenly'}
+				alignItems='center'
 			>
 				<Flex
 					flexDir='column'
+					w={isMobile ? '80vw' : '30vw'}
 					justifyContent='center'
 					alignItems='center'
 					marginBottom={10}
 					boxShadow='md'
 				>
 					<Avatar
-						h='90px'
-						w='90px'
-						name='Christian Nwamba'
+						h={isMobile ? '90px' : '200px'}
+						w={isMobile ? '90px' : '200px'}
 						src='https://bit.ly/code-beast'
 					/>
 					<Flex
@@ -80,11 +53,9 @@ const Nosotros = () => {
 						justifyContent='center'
 						borderRadius={10}
 						marginTop='-45px'
-						flexDir='column'
 					>
 						<Heading
-							marginTop='30px'
-							fontSize='4xl'
+							fontSize={isMobile ? '4xl' : '5xl'}
 							fontFamily='fonts.primaria'
 							color='color.gris'
 						>
@@ -94,15 +65,15 @@ const Nosotros = () => {
 				</Flex>
 				<Flex
 					flexDir='column'
+					w={isMobile ? '80vw' : '30vw'}
 					justifyContent='center'
 					alignItems='center'
 					marginBottom={10}
 					boxShadow='md'
 				>
 					<Avatar
-						h='90px'
-						w='90px'
-						name='Christian Nwamba'
+						h={isMobile ? '90px' : '200px'}
+						w={isMobile ? '90px' : '200px'}
 						src='https://bit.ly/code-beast'
 					/>
 					<Flex
@@ -115,8 +86,7 @@ const Nosotros = () => {
 						marginTop='-45px'
 					>
 						<Heading
-							marginTop='30px'
-							fontSize='4xl'
+							fontSize={isMobile ? '4xl' : '5xl'}
 							fontFamily='fonts.primaria'
 							color='color.gris'
 						>
@@ -147,4 +117,4 @@ const Nosotros = () => {
 	);
 };
 
-export default Nosotros;
+export default NosotrosLanding;

@@ -9,20 +9,24 @@ import {
 } from 'react-icons/bs';
 import { GiLargeDress } from 'react-icons/gi';
 import { FaCocktail } from 'react-icons/fa';
-import ModalCuando from '../Components/Modales/ModalCuando';
-import ModalDonde from '../Components/Modales/ModalDonde';
+import ModalCuando from '../Modales/ModalCuando';
+import ModalDonde from '../Modales/ModalDonde';
 
-const Evento = () => {
+const EventoLanding = () => {
 	const [isMobile] = useMediaQuery('(max-width: 720px)');
 
 	return (
 		<Flex
-			w='100vw'
-			h='100vh'
-			alignItems='center'
-			bgColor='color.gris'
-			overflow='hidden'
-			flexDir='column'
+        h='100vh'
+        alignItems='center'
+        bgColor='color.gris'
+        overflow='hidden'
+        flexDir='column'
+        bgImage='/assets/back1.jpg'
+        bgRepeat='no-repeat'
+        bgSize='cover'
+        bgPos='center'
+        justifyContent="center"
 		>
 			<Flex
 				w={isMobile ? '80vw' : '550px'}
@@ -76,20 +80,6 @@ const Evento = () => {
 				>
 					Más datita importante
 				</Button>
-				<Link to={'/mensajes'} as={ReachLink}>
-					<Button
-						leftIcon={<BsFillChatFill />}
-						w='100%'
-						size='md'
-						color='color.gris'
-						fontFamily='fonts.secundaria'
-						boxShadow='md'
-						justifyContent='flex-start'
-						marginBottom={3}
-					>
-						Quiero dejar un mensaje
-					</Button>
-				</Link>
 				<Button
 					leftIcon={<CheckIcon />}
 					size='md'
@@ -101,22 +91,9 @@ const Evento = () => {
 				>
 					Confirmar asistencia
 				</Button>
-				<Flex justifyContent='center' marginTop={5}>
-					<Link to={'/'} as={ReachLink}>
-						<Button
-							leftIcon={<ChevronLeftIcon />}
-							size='sm'
-							color='color.gris'
-							fontFamily='fonts.secundaria'
-							boxShadow='md'
-						>
-							Volver
-						</Button>
-					</Link>
-				</Flex>
 			</Flex>
 		</Flex>
 	);
 };
 
-export default Evento;
+export default EventoLanding;
