@@ -10,21 +10,27 @@ import {
 	Text,
 	Flex,
 } from '@chakra-ui/react';
-import { BiDrink } from 'react-icons/bi';
-import { FaCocktail } from 'react-icons/fa';
+import { BsCreditCard2BackFill, BsCreditCard2Back } from 'react-icons/bs';
+import { CopyIcon } from '@chakra-ui/icons';
 
-const ModalComida = () => {
+const ModalPago = () => {
 	const OverlayOne = () => (
 		<ModalOverlay bg='blackAlpha.300' backdropFilter='blur(10px)' />
 	);
 
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const [overlay, setOverlay] = useState(<OverlayOne />);
+	const [copiado, setCopiado] = useState(false);
+
+	const copiarAlias = () => {
+		navigator.clipboard.writeText('NICOPICOTTO.UALA');
+		setCopiado(true);
+	};
 
 	return (
 		<>
 			<Button
-				leftIcon={<FaCocktail />}
+				leftIcon={<BsCreditCard2BackFill />}
 				size='md'
 				color='color.gris'
 				fontFamily='fonts.secundaria'
@@ -36,7 +42,7 @@ const ModalComida = () => {
 					onOpen();
 				}}
 			>
-				¿Qué comemos y tomamos?
+				¿Cuánto sale la jodita?
 			</Button>
 			<Modal isCentered isOpen={isOpen} onClose={onClose}>
 				{overlay}
@@ -54,7 +60,7 @@ const ModalComida = () => {
 						padding={5}
 						justifyContent='center'
 					>
-						<BiDrink size={60} />
+						<BsCreditCard2Back size={60} />
 					</Flex>
 					<ModalBody padding={5}>
 						<Text
@@ -64,7 +70,8 @@ const ModalComida = () => {
 							textAlign='center'
 							marginBottom={3}
 						>
-							Luego del civil habrá una recepción con comidita rica para picar.
+							El costo de la tarjeta es de <Text as='b'>$8.000</Text> por
+							persona.
 						</Text>
 						<Flex justifyContent='center'>
 							<Divider
@@ -81,26 +88,29 @@ const ModalComida = () => {
 							textAlign='center'
 							marginBottom={3}
 						>
-							Más tarde pasamos al salón donde nos van a servir los platos
-							principales. Pueden elegir entre:
+							Podés transferir al alias: <Text as='b'>NICOPICOTTO.UALA</Text>
 						</Text>
-						<Text
-							fontFamily='fonts.secundaria'
-							fontSize='sm'
-							color='color.gris'
-							textAlign='center'
-						>
-							• Strudel de hongos
-						</Text>
-						<Text
-							fontFamily='fonts.secundaria'
-							fontSize='sm'
-							color='color.gris'
-							textAlign='center'
-							marginBottom={3}
-						>
-							• Bife de chorizo
-						</Text>
+						<Flex justifyContent='center'>
+							<Button
+								leftIcon={<CopyIcon />}
+								size='sm'
+								onClick={copiarAlias}
+								marginBottom={3}
+							>
+								Copiar alias
+							</Button>
+						</Flex>
+						{copiado && (
+							<Text
+								fontFamily='fonts.secundaria'
+								fontSize='sm'
+								color='color.gris'
+								textAlign='center'
+								marginBottom={3}
+							>
+								¡Copiado!
+							</Text>
+						)}
 						<Flex justifyContent='center'>
 							<Divider
 								borderColor='color.gris'
@@ -116,25 +126,8 @@ const ModalComida = () => {
 							textAlign='center'
 							marginBottom={3}
 						>
-							De postre se servirá *sarasa* de maracuyá.
-						</Text>
-						<Flex justifyContent='center'>
-							<Divider
-								borderColor='color.gris'
-								opacity={0.3}
-								marginBottom={3}
-								w='50%'
-							/>
-						</Flex>
-						<Text
-							fontFamily='fonts.secundaria'
-							fontSize='sm'
-							color='color.gris'
-							textAlign='center'
-							marginBottom={3}
-						>
-							A mitad de fiesta vamos a disfrutar de los clásicos choris, pizza
-							y papas fritas.
+							Tené en cuenta que tenés hasta el{' '}
+							<Text as='b'>Lunes 9 de enero</Text> para confirmar tu asistencia.
 						</Text>
 					</ModalBody>
 				</ModalContent>
@@ -143,4 +136,4 @@ const ModalComida = () => {
 	);
 };
 
-export default ModalComida;
+export default ModalPago;

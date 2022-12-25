@@ -64,7 +64,7 @@ const ModalCuando = () => {
 							textAlign='center'
 							marginBottom={3}
 						>
-							Sábado 11 de Febrero del 2023
+							Sábado 11 de Febrero del 2023.
 						</Text>
 						<Flex justifyContent='center'>
 							<Divider
@@ -81,7 +81,7 @@ const ModalCuando = () => {
 							marginBottom={3}
 							textAlign='center'
 						>
-							18:30 hs - Llegada
+							18:30 hs - Llegada.
 						</Text>
 						<Flex justifyContent='center'>
 							<Divider
@@ -97,7 +97,7 @@ const ModalCuando = () => {
 							color='color.gris'
 							textAlign='center'
 						>
-							19:00 hs - Civil
+							19:00 hs - Civil.
 						</Text>
 					</ModalBody>
 				</ModalContent>

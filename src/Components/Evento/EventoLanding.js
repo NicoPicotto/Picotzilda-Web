@@ -1,15 +1,13 @@
 import React from 'react';
 import { Flex, Button, Link, useMediaQuery } from '@chakra-ui/react';
-import { ChevronLeftIcon, CheckIcon } from '@chakra-ui/icons';
+import { CheckIcon } from '@chakra-ui/icons';
 import { Link as ReachLink } from 'react-router-dom';
-import {
-	BsFillExclamationCircleFill,
-	BsCreditCard2BackFill,
-} from 'react-icons/bs';
-import { GiLargeDress } from 'react-icons/gi';
 import ModalCuando from '../Modales/ModalCuando';
 import ModalDonde from '../Modales/ModalDonde';
 import ModalComida from '../Modales/ModalComida';
+import ModalPago from '../Modales/ModalPago';
+import ModalDatita from '../Modales/ModalDatita';
+import {BsChatDotsFill} from "react-icons/bs"
 
 const EventoLanding = () => {
 	const [isMobile] = useMediaQuery('(max-width: 720px)');
@@ -32,39 +30,8 @@ const EventoLanding = () => {
 				<ModalCuando />
 				<ModalDonde />
 				<ModalComida />
-				<Button
-					leftIcon={<GiLargeDress />}
-					size='md'
-					color='color.gris'
-					fontFamily='fonts.secundaria'
-					boxShadow='md'
-					marginBottom={3}
-					justifyContent={'flex-start'}
-				>
-					¿Qué me pongo?
-				</Button>
-				<Button
-					leftIcon={<BsCreditCard2BackFill />}
-					size='md'
-					color='color.gris'
-					fontFamily='fonts.secundaria'
-					boxShadow='md'
-					marginBottom={3}
-					justifyContent={'flex-start'}
-				>
-					¿Cuánto duele?
-				</Button>
-				<Button
-					leftIcon={<BsFillExclamationCircleFill />}
-					size='md'
-					color='color.gris'
-					fontFamily='fonts.secundaria'
-					boxShadow='md'
-					justifyContent='flex-start'
-					marginBottom={3}
-				>
-					Más datita importante
-				</Button>
+				<ModalPago />
+				<ModalDatita />
 				<Button
 					leftIcon={<CheckIcon />}
 					size='md'
@@ -72,10 +39,24 @@ const EventoLanding = () => {
 					bgColor='color.verde'
 					fontFamily='fonts.secundaria'
 					boxShadow='md'
+					marginBottom={3}
 					justifyContent='flex-start'
 				>
 					Confirmar asistencia
 				</Button>
+				<ReachLink to='/mensajitos'>
+					<Button
+						w='100%'
+						leftIcon={<BsChatDotsFill />}
+						size='md'
+						color='color.gris'
+						fontFamily='fonts.secundaria'
+						boxShadow='md'
+						justifyContent={'flex-start'}
+					>
+						Dejanos un mensajito
+					</Button>
+				</ReachLink>
 			</Flex>
 		</Flex>
 	);

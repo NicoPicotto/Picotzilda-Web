@@ -9,7 +9,6 @@ import {
 	useDisclosure,
 	Text,
 	Flex,
-	AspectRatio,
 } from '@chakra-ui/react';
 import { BsGeoAltFill } from 'react-icons/bs';
 import {CiLocationOn} from "react-icons/ci"
