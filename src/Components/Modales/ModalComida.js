@@ -64,7 +64,7 @@ const ModalComida = () => {
 							textAlign='center'
 							marginBottom={3}
 						>
-							Luego del civil habrá una recepción con comidita rica para picar.
+							Luego del civil habrá una recepción con comidita rica para picar acompañada de bebidas espirituosas.
 						</Text>
 						<Flex justifyContent='center'>
 							<Divider
@@ -81,8 +81,8 @@ const ModalComida = () => {
 							textAlign='center'
 							marginBottom={3}
 						>
-							Más tarde pasamos al salón donde nos van a servir los platos
-							principales. Pueden elegir entre:
+							Más tarde pasaremos al salón donde se servirán los platos
+							principales. Las opciones son:
 						</Text>
 						<Text
 							fontFamily='fonts.secundaria'
@@ -133,7 +133,7 @@ const ModalComida = () => {
 							textAlign='center'
 							marginBottom={3}
 						>
-							A mitad de fiesta vamos a disfrutar de los clásicos choris, pizza
+							A mitad de fiesta, para matar el bajón, vamos a disfrutar de los clásicos choris, pizza
 							y papas fritas.
 						</Text>
 					</ModalBody>

@@ -64,7 +64,7 @@ const ModalDonde = () => {
 							textAlign='center'
 							marginBottom={3}
 						>
-							Las Cortaderas Club de Campo
+							Las Cortaderas Club de Campo.
 						</Text>
 						<Flex justifyContent='center'>
 							<Divider
@@ -81,7 +81,7 @@ const ModalDonde = () => {
 							textAlign='center'
 							marginBottom={3}
 						>
-							Entre General Deheza y General Cabrera
+							Entre General Deheza y General Cabrera.
 						</Text>
 						<Flex justifyContent='center'>
 							<Divider

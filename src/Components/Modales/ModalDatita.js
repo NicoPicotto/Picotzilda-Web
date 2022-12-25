@@ -66,7 +66,7 @@ const ModalDatita = () => {
 							textAlign='center'
 							marginBottom={3}
 						>
-							Queremos que cada uno pueda disfrutar de este día al máximo y sin preocupaciones, por lo que decidimos que sea <Text as='b'>sin niños.</Text>
+							El mayor de nuestros deseos es que todos podamos disfrutas de este día al máximo y sin preocupaciones, por lo que tomamos la decisión que sea un evento <Text as='b'>sin niños.</Text>
 						</Text>
 						<Flex justifyContent='center'>
 							<Divider
