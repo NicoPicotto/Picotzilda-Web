@@ -24,7 +24,6 @@ const NosotrosLanding = () => {
 			<Flex
 				w={isMobile ? '100vw' : '70vw'}
 				flexDir={isMobile ? 'column' : 'row'}
-				h='80vh'
 				justifyContent={isMobile ? 'center' : 'space-evenly'}
 				alignItems='center'
 			>
@@ -90,8 +89,10 @@ const NosotrosLanding = () => {
 						</Heading>
 					</Flex>
 				</Flex>
+			</Flex>
+			<Flex>
 				<Link
-					href='https://open.spotify.com/playlist/5cBK2QK5JoWi9uKkbTHZf2?si=3bf6737768d04380'
+					href='https://open.spotify.com/playlist/0Aov6TdflodjOcT6RrBvGS?si=bd3d1c472b0844ff'
 					target='_blank'
 					isExternal
 				>

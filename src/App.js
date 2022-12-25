@@ -4,6 +4,7 @@ import '@fontsource/rozha-one';
 import theme from './styles/theme';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './views/Home';
+import Mensajes from './views/Mensajes';
 
 const App = () => {
 	return (
@@ -11,6 +12,7 @@ const App = () => {
 			<Router>
 				<Routes>
 					<Route path='/' element={<Home />} />
+					<Route path='/mensajitos' element={<Mensajes />} />
 				</Routes>
 			</Router>
 		</ChakraProvider>

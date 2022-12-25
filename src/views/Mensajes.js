@@ -18,7 +18,7 @@ const Mensajes = () => {
 			flexDir='column'
 		>
 			<Flex marginTop={5}>
-				<Link to={'/evento'} as={ReachLink}>
+				<Link to={'/'} as={ReachLink}>
 					<Button
 						leftIcon={<ChevronLeftIcon />}
 						boxShadow='md'

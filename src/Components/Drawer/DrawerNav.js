@@ -27,20 +27,51 @@ const DrawerNav = () => {
 			<Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
 				<DrawerOverlay />
 				<DrawerContent>
-					<DrawerBody alignItems='center' bgColor='color.gris'>
-						<Heading fontSize='2xl' fontFamily='fonts.secundaria' color='white'>
+					<DrawerBody alignItems='center' bgColor='color.gris' padding={5}>
+						<Button
+							href='#inicio'
+							fontSize='2xl'
+							fontFamily='fonts.secundaria'
+							color='white'
+							textAlign='center'
+							padding={2}
+						>
 							INICIO
-						</Heading>
-						<Heading fontSize='2xl' fontFamily='fonts.secundaria' color='white'>
+						</Button>
+						<Heading
+							fontSize='2xl'
+							fontFamily='fonts.secundaria'
+							color='white'
+							textAlign='center'
+							padding={2}
+						>
 							NOSOTROS
 						</Heading>
-						<Heading fontSize='2xl' fontFamily='fonts.secundaria' color='white'>
+						<Heading
+							fontSize='2xl'
+							fontFamily='fonts.secundaria'
+							color='white'
+							textAlign='center'
+							padding={2}
+						>
 							EL EVENTO
 						</Heading>
-						<Heading fontSize='2xl' fontFamily='fonts.secundaria' color='white'>
+						<Heading
+							fontSize='2xl'
+							fontFamily='fonts.secundaria'
+							color='white'
+							textAlign='center'
+							padding={2}
+						>
 							CONFIRMÁ TU ASISTENCIA
 						</Heading>
-						<Heading fontSize='2xl' fontFamily='fonts.secundaria' color='white'>
+						<Heading
+							fontSize='2xl'
+							fontFamily='fonts.secundaria'
+							color='white'
+							textAlign='center'
+							padding={2}
+						>
 							MENSAJITOS
 						</Heading>
 					</DrawerBody>

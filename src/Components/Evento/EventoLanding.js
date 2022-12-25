@@ -4,13 +4,12 @@ import { ChevronLeftIcon, CheckIcon } from '@chakra-ui/icons';
 import { Link as ReachLink } from 'react-router-dom';
 import {
 	BsFillExclamationCircleFill,
-	BsFillChatFill,
 	BsCreditCard2BackFill,
 } from 'react-icons/bs';
 import { GiLargeDress } from 'react-icons/gi';
-import { FaCocktail } from 'react-icons/fa';
 import ModalCuando from '../Modales/ModalCuando';
 import ModalDonde from '../Modales/ModalDonde';
+import ModalComida from '../Modales/ModalComida';
 
 const EventoLanding = () => {
 	const [isMobile] = useMediaQuery('(max-width: 720px)');
@@ -32,17 +31,7 @@ const EventoLanding = () => {
 			>
 				<ModalCuando />
 				<ModalDonde />
-				<Button
-					leftIcon={<FaCocktail />}
-					size='md'
-					color='color.gris'
-					fontFamily='fonts.secundaria'
-					boxShadow='md'
-					marginBottom={3}
-					justifyContent={'flex-start'}
-				>
-					¿Qué comemos y tomamos?
-				</Button>
+				<ModalComida />
 				<Button
 					leftIcon={<GiLargeDress />}
 					size='md'

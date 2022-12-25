@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Heading, Flex, useMediaQuery, Divider, Image } from '@chakra-ui/react';
+import { Heading, Flex, useMediaQuery } from '@chakra-ui/react';
 import Timer from '../Timer/Timer';
 
 const HomeLanding = () => {
@@ -15,6 +15,7 @@ const HomeLanding = () => {
 			flexDir='column'
 			justifyContent='center'
 			bgColor='color.cremita'
+			id='inicio'
 		>
 			<Flex
 				padding={10}

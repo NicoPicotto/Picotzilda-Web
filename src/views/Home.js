@@ -7,7 +7,7 @@ import NosotrosLanding from '../Components/NosotrosLanding/NosotrosLanding';
 const Home = () => {
 	return (
 		<>
-			<DrawerNav />
+			{/* <DrawerNav /> */}
 			<HomeLanding />
 			<NosotrosLanding />
 			<EventoLanding />
