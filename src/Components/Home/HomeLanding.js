@@ -15,7 +15,6 @@ const HomeLanding = () => {
 			flexDir='column'
 			justifyContent='center'
 			bgColor='color.cremita'
-			id='inicio'
 		>
 			<Flex
 				padding={10}
