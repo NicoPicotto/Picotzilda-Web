@@ -10,6 +10,7 @@ const HomeLanding = () => {
 	return (
 		<Flex
 			h='100vh'
+			w={!isDesktop && "100vw"}
 			overflow='hidden'
 			flexDir='column'
 			justifyContent={isDesktop ? 'center': 'flex-start'}
