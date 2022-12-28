@@ -6,7 +6,6 @@ import { ChevronLeftIcon } from '@chakra-ui/icons';
 import MostrarMensajes from '../Components/Mensajes/MostrarMensajes';
 
 const Mensajes = () => {
-	const [isMobile] = useMediaQuery('(max-width: 720px)');
 
 	return (
 		<Flex

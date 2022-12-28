@@ -23,7 +23,6 @@ const ModalDatita = () => {
 
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const [overlay, setOverlay] = useState(<OverlayOne />);
-	const [isMobile] = useMediaQuery('(max-width: 720px)');
 
 	return (
 		<>

@@ -10,7 +10,7 @@ import {
 import { BsSpotify } from 'react-icons/bs';
 
 const NosotrosLanding = () => {
-	const [isMobile] = useMediaQuery('(max-width: 720px)');
+	const [isDesktop] = useMediaQuery('(min-width: 600px)');
 
 	return (
 		<Flex
@@ -22,22 +22,22 @@ const NosotrosLanding = () => {
 			bgColor='color.gris'
 		>
 			<Flex
-				w={isMobile ? '100vw' : '70vw'}
-				flexDir={isMobile ? 'column' : 'row'}
-				justifyContent={isMobile ? 'center' : 'space-evenly'}
+				w={isDesktop ? '70vw' : '100vw'}
+				flexDir={isDesktop ? 'row' : 'column'}
+				justifyContent={isDesktop ? 'space-evenly' : 'center'}
 				alignItems='center'
 			>
 				<Flex
 					flexDir='column'
-					w={isMobile ? '80vw' : '30vw'}
+					w={isDesktop ? '30vw' : '80vw'}
 					justifyContent='center'
 					alignItems='center'
 					marginBottom={10}
 					boxShadow='md'
 				>
 					<Avatar
-						h={isMobile ? '90px' : '200px'}
-						w={isMobile ? '90px' : '200px'}
+						h={isDesktop ? '200px' : '90px'}
+						w={isDesktop ? '200px' : '90px'}
 						src='/assets/nico.jpg'
 					/>
 					<Flex
@@ -50,7 +50,7 @@ const NosotrosLanding = () => {
 						marginTop='-45px'
 					>
 						<Heading
-							fontSize={isMobile ? '4xl' : '5xl'}
+							fontSize={isDesktop ? '5xl' : '4xl'}
 							fontFamily='fonts.primaria'
 							color='color.gris'
 						>
@@ -60,15 +60,15 @@ const NosotrosLanding = () => {
 				</Flex>
 				<Flex
 					flexDir='column'
-					w={isMobile ? '80vw' : '30vw'}
+					w={isDesktop ? '30vw' : '80vw'}
 					justifyContent='center'
 					alignItems='center'
 					marginBottom={10}
 					boxShadow='md'
 				>
 					<Avatar
-						h={isMobile ? '90px' : '200px'}
-						w={isMobile ? '90px' : '200px'}
+						h={isDesktop ? '200px' : '90px'}
+						w={isDesktop ? '200px' : '90px'}
 						src='/assets/ro.jpg'
 					/>
 					<Flex
@@ -81,7 +81,7 @@ const NosotrosLanding = () => {
 						marginTop='-45px'
 					>
 						<Heading
-							fontSize={isMobile ? '4xl' : '5xl'}
+							fontSize={isDesktop ? '5xl' : '4xl'}
 							fontFamily='fonts.primaria'
 							color='color.gris'
 						>

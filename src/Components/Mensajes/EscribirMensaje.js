@@ -6,7 +6,7 @@ import { Flex, Input, Textarea, Button, useMediaQuery } from '@chakra-ui/react';
 const EscribirMensaje = () => {
 	const [nombre, setNombre] = useState('');
 	const [mensaje, setMensaje] = useState('');
-	const [isMobile] = useMediaQuery('(max-width: 720px)');
+	const [isDesktop] = useMediaQuery('(min-width: 600px)');
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
@@ -26,7 +26,7 @@ const EscribirMensaje = () => {
 			as='form'
 			onSubmit={handleSubmit}
 			flexDir='column'
-			w={isMobile ? '80vw' : '550px'}
+			w={isDesktop ? '550px' : '80vw'}
 			alignItems='center'
 			justifyContent='center'
 			borderBottomWidth={1}
@@ -44,7 +44,7 @@ const EscribirMensaje = () => {
 				marginBottom={2}
 				bgColor='white'
 				fontFamily='fonts.secundaria'
-				w={isMobile ? '80vw' : '550px'}
+				w={isDesktop ? '550px' : '80vw'}
 			/>
 			<Textarea
 				placeholder='Mensaje'
@@ -56,14 +56,14 @@ const EscribirMensaje = () => {
 				marginBottom={2}
 				bgColor='white'
 				fontFamily='fonts.secundaria'
-				w={isMobile ? '80vw' : '550px'}
+				w={isDesktop ? '550px' : '80vw'}
 			/>
 			<Button
 				bgColor='white'
 				color='color.gris'
 				type='submit'
 				fontFamily='fonts.secundaria'
-				w={isMobile ? '80vw' : '550px'}
+				w={isDesktop ? '550px' : '80vw'}
 				size='sm'
 				borderRadius={5}
 				_focus={{ bgColor: 'white' }}

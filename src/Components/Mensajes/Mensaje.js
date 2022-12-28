@@ -3,14 +3,14 @@ import { Flex, Divider, Text, Heading, useMediaQuery } from '@chakra-ui/react';
 import { ChatIcon } from '@chakra-ui/icons';
 
 const Mensaje = ({ nombre, mensaje }) => {
-	const [isMobile] = useMediaQuery('(max-width: 720px)');
+	const [isDesktop] = useMediaQuery('(min-width: 600px)');
 
 	return (
 		<Flex
 			flexDir='column'
 			bgColor='white'
 			borderRadius={10}
-			w={isMobile ? '80vw' : '550px'}
+			w={isDesktop ? '550px' : '80vw'}
 			padding={2}
 			margin={2}
 			boxShadow='md'

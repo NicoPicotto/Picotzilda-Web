@@ -10,31 +10,31 @@ import ModalDatita from '../Modales/ModalDatita';
 import { BsChatDotsFill } from 'react-icons/bs';
 
 const EventoLanding = () => {
-	const [isMobile] = useMediaQuery('(max-width: 720px)');
+	const [isDesktop] = useMediaQuery('(min-width: 600px)');
 
 	return (
 		<Flex
 			h='100vh'
 			overflow='hidden'
 			flexDir='column'
-			justifyContent={isMobile ? 'flex-start' : 'center'}
-			bgImage={isMobile ? '/assets/CHP_1756.jpg' : '/assets/CHP_17182.jpg'}
+			justifyContent={isDesktop ? 'center' : 'flex-start'}
+			bgImage={isDesktop ? '/assets/CHP_17182.jpg' : '/assets/CHP_1756.jpg'}
 			bgSize='cover'
-			bgPos={isMobile ? '50% 100%' : '100% 100%'}
+			bgPos={isDesktop ? '100% 100%' : '50% 100%'}
 			bgAttachment='fixed'
 		>
 			<Flex
-				padding={isMobile ? 1 : 20}
-				marginTop={isMobile && 5}
+				padding={isDesktop ? 20 : 1}
+				marginTop={isDesktop ? 0 : 5}
 				flexDir='column'
 				justifyContent='center'
 				alignItems='center'
-				bgColor={isMobile ? 'none' : 'rgba(255, 255, 255, 0.3)'}
-				boxShadow={isMobile ? 'none' : '0 8px 32px 0 gray'}
-				w={isMobile ? '100%' : '40%'}
-				h={isMobile ? '40%' : '100%'}
-				backdropFilter={isMobile ? 'none' : 'blur(8px)'}
-				border={isMobile ? 'none' : '1px solid rgba(255, 255, 255, 0.2'}
+				bgColor={isDesktop ? 'rgba(255, 255, 255, 0.3)' : 'none'}
+				boxShadow={isDesktop ? '0 8px 32px 0 gray' : 'none'}
+				w={isDesktop ? '40%' : '100%'}
+				h={isDesktop ? '100%' : '40%'}
+				backdropFilter={isDesktop ? 'blur(8px)' : 'none'}
+				border={isDesktop ? '1px solid rgba(255, 255, 255, 0.2' : 'none'}
 			>
 				<ModalCuando />
 				<ModalDonde />

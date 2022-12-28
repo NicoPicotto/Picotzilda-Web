@@ -7,7 +7,7 @@ import Mensaje from './Mensaje';
 const MostrarMensajes = () => {
 	const [mensajitos, setMensajitos] = useState([]);
 	const [loading, setLoading] = useState(false);
-	const [isMobile] = useMediaQuery('(max-width: 1100px)');
+	const [isDesktop] = useMediaQuery('(min-width: 600px)');
 
 	useEffect(() => {
 		setLoading(true);
@@ -33,7 +33,7 @@ const MostrarMensajes = () => {
 			alignItems='center'
 			padding={5}
 			overflowY='scroll'
-			w={isMobile ? '100vw' : '720px'}
+			w={isDesktop ? '720px' : '100vw'}
 		>
 			<Flex flexDir='column'>
 				{mensajitos.map((mensaje) => (

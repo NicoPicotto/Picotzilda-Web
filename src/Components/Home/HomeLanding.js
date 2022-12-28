@@ -5,35 +5,35 @@ import Timer from '../Timer/Timer';
 const HomeLanding = () => {
 	const [deadline] = useState('2023-02-11T18:00:00-03:00');
 
-	const [isMobile] = useMediaQuery('(max-width: 720px)');
+	const [isDesktop] = useMediaQuery('(min-width: 600px)');
 
 	return (
 		<Flex
 			h='100vh'
 			overflow='hidden'
 			flexDir='column'
-			justifyContent={isMobile ? 'flex-start' : 'center'}
+			justifyContent={isDesktop ? 'center': 'flex-start'}
 			bgImage='/assets/CHP_2703.jpg'
 			bgSize='cover'
-			bgPos={isMobile ? '80% 100%' : 'bottom'}
+			bgPos={isDesktop ? 'bottom': '80% 100%'}
 			bgAttachment='fixed'
 		>
 			<Flex
-				padding={isMobile ? 10 : 20}
+				padding={isDesktop ? 10 : 20}
 				flexDir='column'
 				justifyContent='center'
 				alignItems='center'
-				bgColor={isMobile ? 'none' : 'rgba(255, 255, 255, 0.3)'}
-				boxShadow={isMobile ? 'none' : '0 8px 32px 0 gray'}
-				w={isMobile ? '100%' : 'fit-content'}
-				h={isMobile ? '40%' : '100%'}
-				backdropFilter={isMobile ? 'none' : 'blur(8px)'}
-				border={isMobile ? 'none' : '1px solid rgba(255, 255, 255, 0.2'}
+				bgColor={isDesktop ? 'rgba(255, 255, 255, 0.3)' : 'none'}
+				boxShadow={isDesktop ? '0 8px 32px 0 gray' : 'none'}
+				w={isDesktop ? 'fit-content' : '100%'}
+				h={isDesktop ? '100%' : '40%'}
+				backdropFilter={isDesktop ? 'blur(8px)' : 'none'}
+				border={isDesktop ? '1px solid rgba(255, 255, 255, 0.2' : 'none'}
 			>
 				<Heading
 					fontFamily='fonts.primaria'
 					fontWeight='medium'
-					fontSize={isMobile ? '3em' : '6em'}
+					fontSize={isDesktop ? '6em' : '3em'}
 					color="white"
 					textShadow={"2px 2px 4px gray"}
 				>
@@ -45,7 +45,7 @@ const HomeLanding = () => {
 					color="white"
 					textShadow={"2px 2px 4px gray"}
 					fontWeight='medium'
-					fontSize={isMobile ? '3em' : '6em'}
+					fontSize={isDesktop ? '6em' : '3em'}
 				>
 					11 | 02 | 23
 				</Heading>
