@@ -18,9 +18,9 @@ const EventoLanding = () => {
 			overflow='hidden'
 			flexDir='column'
 			justifyContent={isDesktop ? 'center' : 'flex-start'}
-			bgImage={isDesktop ? '/assets/CHP_17182.jpg' : '/assets/CHP_1756.jpg'}
+			bgImage={isDesktop ? '/assets/CHP_17182.jpg' : '/assets/mobileevento.jpg'}
 			bgSize='cover'
-			bgPos={isDesktop ? '100% 100%' : '50% 100%'}
+			bgPos={"bottom"}
 			bgAttachment='fixed'
 		>
 			<Flex
