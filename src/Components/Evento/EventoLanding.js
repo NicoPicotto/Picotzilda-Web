@@ -20,7 +20,7 @@ const EventoLanding = () => {
 			justifyContent={isMobile ? 'flex-start' : 'center'}
 			bgImage={isMobile ? '/assets/CHP_1756.jpg' : '/assets/CHP_17182.jpg'}
 			bgSize='cover'
-			bgPos={isMobile ? '50% 100%' : '100% 65%'}
+			bgPos={isMobile ? '50% 100%' : '100% 100%'}
 			bgAttachment='fixed'
 		>
 			<Flex

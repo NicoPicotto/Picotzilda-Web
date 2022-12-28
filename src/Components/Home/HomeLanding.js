@@ -37,7 +37,7 @@ const HomeLanding = () => {
 					color="white"
 					textShadow={"2px 2px 4px gray"}
 				>
-					Nico & R
+					Nico & Ro
 				</Heading>
 
 				<Heading
