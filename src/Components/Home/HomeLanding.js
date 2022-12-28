@@ -17,7 +17,7 @@ const HomeLanding = () => {
 			bgImage={isDesktop ? '/assets/CHP_2703.jpg' : "/assets/mobilehome.jpg"}
 			bgSize='cover'
 			bgPos='bottom'
-			bgAttachment='fixed'
+			bgAttachment={isDesktop && 'fixed'}
 		>
 			<Flex
 				padding={isDesktop ? 10 : 20}

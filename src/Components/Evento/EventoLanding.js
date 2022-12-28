@@ -22,7 +22,7 @@ const EventoLanding = () => {
 			bgImage={isDesktop ? '/assets/CHP_17182.jpg' : '/assets/mobileevento.jpg'}
 			bgSize='cover'
 			bgPos={"bottom"}
-			bgAttachment='fixed'
+			bgAttachment={isDesktop && 'fixed'}
 		>
 			<Flex
 				padding={isDesktop ? 20 : 1}
