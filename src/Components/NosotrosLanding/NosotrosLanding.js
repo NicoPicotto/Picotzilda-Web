@@ -38,38 +38,7 @@ const NosotrosLanding = () => {
 					<Avatar
 						h={isMobile ? '90px' : '200px'}
 						w={isMobile ? '90px' : '200px'}
-						src='https://bit.ly/code-beast'
-					/>
-					<Flex
-						bgColor='white'
-						w='100%'
-						h='160px'
-						alignItems='center'
-						justifyContent='center'
-						borderRadius={10}
-						marginTop='-45px'
-					>
-						<Heading
-							fontSize={isMobile ? '4xl' : '5xl'}
-							fontFamily='fonts.primaria'
-							color='color.gris'
-						>
-							Rocilda
-						</Heading>
-					</Flex>
-				</Flex>
-				<Flex
-					flexDir='column'
-					w={isMobile ? '80vw' : '30vw'}
-					justifyContent='center'
-					alignItems='center'
-					marginBottom={10}
-					boxShadow='md'
-				>
-					<Avatar
-						h={isMobile ? '90px' : '200px'}
-						w={isMobile ? '90px' : '200px'}
-						src='https://bit.ly/code-beast'
+						src='/assets/nico.jpg'
 					/>
 					<Flex
 						bgColor='white'
@@ -86,6 +55,37 @@ const NosotrosLanding = () => {
 							color='color.gris'
 						>
 							Nico
+						</Heading>
+					</Flex>
+				</Flex>
+				<Flex
+					flexDir='column'
+					w={isMobile ? '80vw' : '30vw'}
+					justifyContent='center'
+					alignItems='center'
+					marginBottom={10}
+					boxShadow='md'
+				>
+					<Avatar
+						h={isMobile ? '90px' : '200px'}
+						w={isMobile ? '90px' : '200px'}
+						src='/assets/ro.jpg'
+					/>
+					<Flex
+						bgColor='white'
+						w='100%'
+						h='160px'
+						alignItems='center'
+						justifyContent='center'
+						borderRadius={10}
+						marginTop='-45px'
+					>
+						<Heading
+							fontSize={isMobile ? '4xl' : '5xl'}
+							fontFamily='fonts.primaria'
+							color='color.gris'
+						>
+							Rocilda
 						</Heading>
 					</Flex>
 				</Flex>

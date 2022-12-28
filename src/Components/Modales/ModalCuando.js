@@ -24,13 +24,13 @@ const ModalCuando = () => {
 		<>
 			<Button
 				leftIcon={<BsFillCalendarEventFill />}
-				size='md'
+				w="75%"
+				bgColor="rgba(255, 255, 255, 0.4)"
+				_hover={{bg: "rgba(255, 255, 255, 0.6)"}}
 				color='color.gris'
 				fontFamily='fonts.secundaria'
-				boxShadow='md'
-				marginTop={-10}
 				marginBottom={3}
-				justifyContent={'flex-start'}
+				justifyContent={'center'}
 				onClick={() => {
 					setOverlay(<OverlayOne />);
 					onOpen();

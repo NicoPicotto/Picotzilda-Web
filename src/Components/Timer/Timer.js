@@ -33,7 +33,8 @@ const Timer = ({ deadline }) => {
 				fontFamily='fonts.secundaria'
 				fontWeight='medium'
 				fontSize='xl'
-				color='color.gris'
+				color="white"
+				textShadow={"2px 2px 2px gray"}
 				padding={3}
 				lineHeight={1}
 			>

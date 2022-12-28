@@ -9,6 +9,7 @@ import {
 	useDisclosure,
 	Text,
 	Flex,
+	useMediaQuery
 } from '@chakra-ui/react';
 import {
 	BsFillExclamationCircleFill,
@@ -22,17 +23,19 @@ const ModalDatita = () => {
 
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const [overlay, setOverlay] = useState(<OverlayOne />);
+	const [isMobile] = useMediaQuery('(max-width: 720px)');
 
 	return (
 		<>
 			<Button
 				leftIcon={<BsFillExclamationCircleFill />}
-				size='md'
+				w="75%"
+				bgColor="rgba(255, 255, 255, 0.4)"
+				_hover={{bg: "rgba(255, 255, 255, 0.6)"}}
 				color='color.gris'
 				fontFamily='fonts.secundaria'
-				boxShadow='md'
 				marginBottom={3}
-				justifyContent={'flex-start'}
+				justifyContent={'center'}
 				onClick={() => {
 					setOverlay(<OverlayOne />);
 					onOpen();
@@ -66,7 +69,7 @@ const ModalDatita = () => {
 							textAlign='center'
 							marginBottom={3}
 						>
-							El mayor de nuestros deseos es que todos podamos disfrutas de este día al máximo y sin preocupaciones, por lo que tomamos la decisión que sea un evento <Text as='b'>sin niños.</Text>
+							El mayor de nuestros deseos es que todos podamos disfrutar de este día al máximo y sin preocupaciones, por lo que tomamos la decisión que sea un evento <Text as='b'>sólo para adultos</Text> (sin niños).
 						</Text>
 						<Flex justifyContent='center'>
 							<Divider
@@ -81,9 +84,8 @@ const ModalDatita = () => {
 							fontSize='sm'
 							color='color.gris'
 							textAlign='center'
-							marginBottom={3}
 						>
-							El código de vestimenta es <Text as='b'>elegante sport.</Text>
+							Si bien el código de vestimenta es <Text as='b'>elegante sport</Text>, no tengas miedo de llevar calzado cómodo para tirar los prohibidos.
 						</Text>
 					</ModalBody>
 				</ModalContent>

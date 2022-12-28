@@ -7,7 +7,7 @@ import ModalDonde from '../Modales/ModalDonde';
 import ModalComida from '../Modales/ModalComida';
 import ModalPago from '../Modales/ModalPago';
 import ModalDatita from '../Modales/ModalDatita';
-import {BsChatDotsFill} from "react-icons/bs"
+import { BsChatDotsFill } from 'react-icons/bs';
 
 const EventoLanding = () => {
 	const [isMobile] = useMediaQuery('(max-width: 720px)');
@@ -15,17 +15,26 @@ const EventoLanding = () => {
 	return (
 		<Flex
 			h='100vh'
-			alignItems='center'
 			overflow='hidden'
 			flexDir='column'
-			justifyContent='center'
-			bgColor='#F8F9F0'
+			justifyContent={isMobile ? 'flex-start' : 'center'}
+			bgImage={isMobile ? '/assets/CHP_1756.jpg' : '/assets/CHP_17182.jpg'}
+			bgSize='cover'
+			bgPos={isMobile ? '50% 100%' : '100% 65%'}
+			bgAttachment='fixed'
 		>
 			<Flex
-				w={isMobile ? '80vw' : '550px'}
+				padding={isMobile ? 1 : 20}
+				marginTop={isMobile && 5}
 				flexDir='column'
-				h='100vh'
 				justifyContent='center'
+				alignItems='center'
+				bgColor={isMobile ? 'none' : 'rgba(255, 255, 255, 0.3)'}
+				boxShadow={isMobile ? 'none' : '0 8px 32px 0 gray'}
+				w={isMobile ? '100%' : '40%'}
+				h={isMobile ? '40%' : '100%'}
+				backdropFilter={isMobile ? 'none' : 'blur(8px)'}
+				border={isMobile ? 'none' : '1px solid rgba(255, 255, 255, 0.2'}
 			>
 				<ModalCuando />
 				<ModalDonde />
@@ -34,21 +43,23 @@ const EventoLanding = () => {
 				<ModalDatita />
 				<Button
 					leftIcon={<CheckIcon />}
-					size='md'
+					w='75%'
+					as='a'
+					bgColor='rgba(132, 153, 116, 0.7)'
+					_hover={{ bg: 'rgba(132, 153, 116)' }}
 					color='white'
-					bgColor='color.verde'
+					target='_blank'
+					href='https://docs.google.com/forms/d/e/1FAIpQLSdtWeon9UIZNB_4qmJjkTcszZQ66iPSmjNUBOcvkp4hq0XSgw/viewform?usp=sf_link'
 					fontFamily='fonts.secundaria'
-					boxShadow='md'
 					marginBottom={3}
-					justifyContent='flex-start'
+					justifyContent={'center'}
 				>
 					Confirmar asistencia
 				</Button>
-				<ReachLink to='/mensajitos'>
+				{/* <ReachLink to='/mensajitos'>
 					<Button
-						w='100%'
 						leftIcon={<BsChatDotsFill />}
-						size='md'
+						w="75%"
 						color='color.gris'
 						fontFamily='fonts.secundaria'
 						boxShadow='md'
@@ -56,7 +67,7 @@ const EventoLanding = () => {
 					>
 						Dejanos un mensajito
 					</Button>
-				</ReachLink>
+				</ReachLink> */}
 			</Flex>
 		</Flex>
 	);

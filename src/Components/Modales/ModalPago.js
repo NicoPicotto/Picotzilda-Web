@@ -31,12 +31,13 @@ const ModalPago = () => {
 		<>
 			<Button
 				leftIcon={<BsCreditCard2BackFill />}
-				size='md'
+				w="75%"
+				bgColor="rgba(255, 255, 255, 0.4)"
+				_hover={{bg: "rgba(255, 255, 255, 0.6)"}}
 				color='color.gris'
 				fontFamily='fonts.secundaria'
-				boxShadow='md'
 				marginBottom={3}
-				justifyContent={'flex-start'}
+				justifyContent={'center'}
 				onClick={() => {
 					setOverlay(<OverlayOne />);
 					onOpen();
@@ -124,7 +125,6 @@ const ModalPago = () => {
 							fontSize='sm'
 							color='color.gris'
 							textAlign='center'
-							marginBottom={3}
 						>
 							Tené en cuenta que tenés hasta el{' '}
 							<Text as='b'>Lunes 9 de enero</Text> para confirmar tu asistencia.

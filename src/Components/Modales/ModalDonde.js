@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/react';
 import { BsGeoAltFill } from 'react-icons/bs';
 import {CiLocationOn} from "react-icons/ci"
+import {FiMap} from "react-icons/fi"
 
 const ModalDonde = () => {
 	const OverlayOne = () => (
@@ -25,12 +26,13 @@ const ModalDonde = () => {
 		<>
 			<Button
 				leftIcon={<BsGeoAltFill />}
-				size='md'
+				w="75%"
+				bgColor="rgba(255, 255, 255, 0.4)"
+				_hover={{bg: "rgba(255, 255, 255, 0.6)"}}
 				color='color.gris'
 				fontFamily='fonts.secundaria'
-				boxShadow='md'
 				marginBottom={3}
-				justifyContent={'flex-start'}
+				justifyContent={'center'}
 				onClick={() => {
 					setOverlay(<OverlayOne />);
 					onOpen();
@@ -91,22 +93,17 @@ const ModalDonde = () => {
 								w='50%'
 							/>
 						</Flex>
-						<Flex
-							borderRadius={10}
-							overflow='hidden'
-							boxShadow='md'
-							justifyContent='center'
-							alignItems='center'
-							w='100%'
-						>
-							<iframe
-								src='https://maps.google.com/maps?q=Las%20Cortaderas&t=&z=15&ie=UTF8&iwloc=&output=embed'
-								frameborder='0'
-								scrolling='no'
-								marginheight='0'
-								marginwidth='0'
-								width='100%'
-							></iframe>
+						<Flex justifyContent='center'>
+							<Button
+								leftIcon={<FiMap />}
+								size='sm'
+								as='a'
+								target='_blank'
+								href='https://goo.gl/maps/X9SkHFPYgARFpxd17'
+
+							>
+								Abrir en Maps
+							</Button>
 						</Flex>
 					</ModalBody>
 				</ModalContent>

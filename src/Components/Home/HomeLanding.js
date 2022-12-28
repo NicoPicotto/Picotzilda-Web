@@ -10,49 +10,46 @@ const HomeLanding = () => {
 	return (
 		<Flex
 			h='100vh'
-			alignItems='center'
 			overflow='hidden'
 			flexDir='column'
-			justifyContent='center'
-			bgColor='color.cremita'
+			justifyContent={isMobile ? 'flex-start' : 'center'}
+			bgImage='/assets/CHP_2703.jpg'
+			bgSize='cover'
+			bgPos={isMobile ? '80% 100%' : 'bottom'}
+			bgAttachment='fixed'
 		>
 			<Flex
-				padding={10}
+				padding={isMobile ? 10 : 20}
 				flexDir='column'
 				justifyContent='center'
 				alignItems='center'
+				bgColor={isMobile ? 'none' : 'rgba(255, 255, 255, 0.3)'}
+				boxShadow={isMobile ? 'none' : '0 8px 32px 0 gray'}
+				w={isMobile ? '100%' : 'fit-content'}
+				h={isMobile ? '40%' : '100%'}
+				backdropFilter={isMobile ? 'none' : 'blur(8px)'}
+				border={isMobile ? 'none' : '1px solid rgba(255, 255, 255, 0.2'}
 			>
-				<Flex
-					w={isMobile ? '80vw' : '40vw'}
-					h='20vh'
-					overflow='hidden'
-					backgroundImage='/assets/back1.jpg'
-					backgroundSize='100%'
-					borderRadius={5}
-				/>
-				<Heading fontFamily='fonts.primaria' fontWeight='medium'>
+				<Heading
+					fontFamily='fonts.primaria'
+					fontWeight='medium'
+					fontSize={isMobile ? '3em' : '6em'}
+					color="white"
+					textShadow={"2px 2px 4px gray"}
+				>
 					Nico & Ro
 				</Heading>
-				<Flex
-					w={isMobile ? '80vw' : '40vw'}
-					h='20vh'
-					overflow='hidden'
-					backgroundImage='/assets/back1.jpg'
-					backgroundSize='100%'
-					borderRadius={5}
-				/>
-				<Heading fontFamily='fonts.primaria' fontWeight='medium'>
+
+				<Heading
+					fontFamily='fonts.primaria'
+					color="white"
+					textShadow={"2px 2px 4px gray"}
+					fontWeight='medium'
+					fontSize={isMobile ? '3em' : '6em'}
+				>
 					11 | 02 | 23
 				</Heading>
-				<Flex
-					w={isMobile ? '80vw' : '40vw'}
-					h='20vh'
-					overflow='hidden'
-					backgroundImage='/assets/back1.jpg'
-					backgroundSize='100%'
-					borderRadius={5}
-					marginBottom={5}
-				/>
+
 				<Flex>
 					<Timer deadline={deadline} />
 				</Flex>

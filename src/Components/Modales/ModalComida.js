@@ -25,12 +25,13 @@ const ModalComida = () => {
 		<>
 			<Button
 				leftIcon={<FaCocktail />}
-				size='md'
+				w="75%"
+				bgColor="rgba(255, 255, 255, 0.4)"
+				_hover={{bg: "rgba(255, 255, 255, 0.6)"}}
 				color='color.gris'
 				fontFamily='fonts.secundaria'
-				boxShadow='md'
 				marginBottom={3}
-				justifyContent={'flex-start'}
+				justifyContent={'center'}
 				onClick={() => {
 					setOverlay(<OverlayOne />);
 					onOpen();
@@ -114,24 +115,6 @@ const ModalComida = () => {
 							fontSize='sm'
 							color='color.gris'
 							textAlign='center'
-							marginBottom={3}
-						>
-							De postre se servirá *sarasa* de maracuyá.
-						</Text>
-						<Flex justifyContent='center'>
-							<Divider
-								borderColor='color.gris'
-								opacity={0.3}
-								marginBottom={3}
-								w='50%'
-							/>
-						</Flex>
-						<Text
-							fontFamily='fonts.secundaria'
-							fontSize='sm'
-							color='color.gris'
-							textAlign='center'
-							marginBottom={3}
 						>
 							A mitad de fiesta, para matar el bajón, vamos a disfrutar de los clásicos choris, pizza
 							y papas fritas.
