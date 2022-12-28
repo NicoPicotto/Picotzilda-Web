@@ -11,11 +11,12 @@ const HomeLanding = () => {
 		<Flex
 			h='100vh'
 			overflow='hidden'
+			w="100%"
 			flexDir='column'
 			justifyContent={isDesktop ? 'center': 'flex-start'}
 			bgImage={isDesktop ? '/assets/CHP_2703.jpg' : "/assets/mobilehome.jpg"}
 			bgSize='cover'
-			bgPos={'bottom'}
+			bgPos='bottom'
 			bgAttachment='fixed'
 		>
 			<Flex

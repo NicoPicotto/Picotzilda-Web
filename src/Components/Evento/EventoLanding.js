@@ -16,6 +16,7 @@ const EventoLanding = () => {
 		<Flex
 			h='100vh'
 			overflow='hidden'
+			w="100%"
 			flexDir='column'
 			justifyContent={isDesktop ? 'center' : 'flex-start'}
 			bgImage={isDesktop ? '/assets/CHP_17182.jpg' : '/assets/mobileevento.jpg'}
