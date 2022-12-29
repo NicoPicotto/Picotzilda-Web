@@ -9,6 +9,7 @@ import {
 	useDisclosure,
 	Text,
 	Flex,
+	useMediaQuery
 } from '@chakra-ui/react';
 import { BiDrink } from 'react-icons/bi';
 import { FaCocktail } from 'react-icons/fa';
@@ -20,12 +21,14 @@ const ModalComida = () => {
 
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const [overlay, setOverlay] = useState(<OverlayOne />);
+	const [isDesktop] = useMediaQuery('(min-width: 600px)');
 
 	return (
 		<>
 			<Button
 				leftIcon={<FaCocktail />}
-				w="75%"
+				size={isDesktop ? 'md' : 'sm'}
+				w={isDesktop ? '75%' : '60%'}
 				bgColor="rgba(255, 255, 255, 0.4)"
 				_hover={{bg: "rgba(255, 255, 255, 0.6)"}}
 				color='color.gris'
@@ -37,7 +40,7 @@ const ModalComida = () => {
 					onOpen();
 				}}
 			>
-				¿Qué comemos y tomamos?
+				¿Qué se come y toma?
 			</Button>
 			<Modal isCentered isOpen={isOpen} onClose={onClose}>
 				{overlay}
@@ -91,7 +94,7 @@ const ModalComida = () => {
 							color='color.gris'
 							textAlign='center'
 						>
-							• Strudel de hongos
+							• Strudel de hongos.
 						</Text>
 						<Text
 							fontFamily='fonts.secundaria'
@@ -100,7 +103,24 @@ const ModalComida = () => {
 							textAlign='center'
 							marginBottom={3}
 						>
-							• Bife de chorizo
+							• Bife de chorizo con salsa gremolata.
+						</Text>
+						<Flex justifyContent='center'>
+							<Divider
+								borderColor='color.gris'
+								opacity={0.3}
+								marginBottom={3}
+								w='50%'
+							/>
+						</Flex>
+						<Text
+							fontFamily='fonts.secundaria'
+							fontSize='sm'
+							color='color.gris'
+							textAlign='center'
+							marginBottom={3}
+						>
+							De postre un rico cremoso de maracuyá.
 						</Text>
 						<Flex justifyContent='center'>
 							<Divider

@@ -44,7 +44,8 @@ const EventoLanding = () => {
 				<ModalDatita />
 				<Button
 					leftIcon={<CheckIcon />}
-					w='75%'
+					size={isDesktop ? "md" : "sm"}
+					w={isDesktop ? '75%' : "60%"}
 					as='a'
 					bgColor='rgba(132, 153, 116, 0.7)'
 					_hover={{ bg: 'rgba(132, 153, 116)' }}

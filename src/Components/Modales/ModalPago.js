@@ -9,6 +9,7 @@ import {
 	useDisclosure,
 	Text,
 	Flex,
+	useMediaQuery
 } from '@chakra-ui/react';
 import { BsCreditCard2BackFill, BsCreditCard2Back } from 'react-icons/bs';
 import { CopyIcon } from '@chakra-ui/icons';
@@ -21,6 +22,7 @@ const ModalPago = () => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const [overlay, setOverlay] = useState(<OverlayOne />);
 	const [copiado, setCopiado] = useState(false);
+	const [isDesktop] = useMediaQuery('(min-width: 600px)');
 
 	const copiarAlias = () => {
 		navigator.clipboard.writeText('NICOPICOTTO.UALA');
@@ -31,7 +33,8 @@ const ModalPago = () => {
 		<>
 			<Button
 				leftIcon={<BsCreditCard2BackFill />}
-				w="75%"
+				size={isDesktop ? 'md' : 'sm'}
+				w={isDesktop ? '75%' : '60%'}
 				bgColor="rgba(255, 255, 255, 0.4)"
 				_hover={{bg: "rgba(255, 255, 255, 0.6)"}}
 				color='color.gris'
@@ -71,7 +74,7 @@ const ModalPago = () => {
 							textAlign='center'
 							marginBottom={3}
 						>
-							El costo de la tarjeta es de <Text as='b'>$8.000</Text> por
+							El costo de la tarjeta es de <Text as='b'>$8.500</Text> por
 							persona.
 						</Text>
 						<Flex justifyContent='center'>

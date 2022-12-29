@@ -9,10 +9,11 @@ import {
 	useDisclosure,
 	Text,
 	Flex,
+	useMediaQuery,
 } from '@chakra-ui/react';
 import { BsGeoAltFill } from 'react-icons/bs';
-import {CiLocationOn} from "react-icons/ci"
-import {FiMap} from "react-icons/fi"
+import { CiLocationOn } from 'react-icons/ci';
+import { FiMap } from 'react-icons/fi';
 
 const ModalDonde = () => {
 	const OverlayOne = () => (
@@ -21,14 +22,16 @@ const ModalDonde = () => {
 
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const [overlay, setOverlay] = useState(<OverlayOne />);
+	const [isDesktop] = useMediaQuery('(min-width: 600px)');
 
 	return (
 		<>
 			<Button
 				leftIcon={<BsGeoAltFill />}
-				w="75%"
-				bgColor="rgba(255, 255, 255, 0.4)"
-				_hover={{bg: "rgba(255, 255, 255, 0.6)"}}
+				size={isDesktop ? 'md' : 'sm'}
+				w={isDesktop ? '75%' : '60%'}
+				bgColor='rgba(255, 255, 255, 0.4)'
+				_hover={{ bg: 'rgba(255, 255, 255, 0.6)' }}
 				color='color.gris'
 				fontFamily='fonts.secundaria'
 				marginBottom={3}
@@ -100,7 +103,6 @@ const ModalDonde = () => {
 								as='a'
 								target='_blank'
 								href='https://goo.gl/maps/X9SkHFPYgARFpxd17'
-
 							>
 								Abrir en Maps
 							</Button>

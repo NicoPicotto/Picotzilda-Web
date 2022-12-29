@@ -9,6 +9,7 @@ import {
 	useDisclosure,
 	Text,
 	Flex,
+	useMediaQuery,
 } from '@chakra-ui/react';
 import { BsCalendar2Event, BsFillCalendarEventFill } from 'react-icons/bs';
 
@@ -19,14 +20,16 @@ const ModalCuando = () => {
 
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	const [overlay, setOverlay] = useState(<OverlayOne />);
+	const [isDesktop] = useMediaQuery('(min-width: 600px)');
 
 	return (
 		<>
 			<Button
 				leftIcon={<BsFillCalendarEventFill />}
-				w="75%"
-				bgColor="rgba(255, 255, 255, 0.4)"
-				_hover={{bg: "rgba(255, 255, 255, 0.6)"}}
+				size={isDesktop ? 'md' : 'sm'}
+				w={isDesktop ? '75%' : '60%'}
+				bgColor='rgba(255, 255, 255, 0.4)'
+				_hover={{ bg: 'rgba(255, 255, 255, 0.6)' }}
 				color='color.gris'
 				fontFamily='fonts.secundaria'
 				marginBottom={3}
