@@ -35,7 +35,7 @@ const NosotrosLanding = () => {
 					src='/assets/CHP_16711.jpg'
 					filter='grayscale(100%)'
 					marginBottom={4}
-					w={isDesktop && '50%'}
+					w={isDesktop && '40%'}
 				/>
 
 				{isDesktop ? (
