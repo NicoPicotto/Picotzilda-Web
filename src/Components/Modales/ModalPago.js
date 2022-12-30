@@ -9,7 +9,7 @@ import {
 	useDisclosure,
 	Text,
 	Flex,
-	useMediaQuery
+	useMediaQuery,
 } from '@chakra-ui/react';
 import { BsCreditCard2BackFill, BsCreditCard2Back } from 'react-icons/bs';
 import { CopyIcon } from '@chakra-ui/icons';
@@ -35,8 +35,8 @@ const ModalPago = () => {
 				leftIcon={<BsCreditCard2BackFill />}
 				size={isDesktop ? 'md' : 'sm'}
 				w={isDesktop ? '75%' : '60%'}
-				bgColor="rgba(255, 255, 255, 0.4)"
-				_hover={{bg: "rgba(255, 255, 255, 0.6)"}}
+				bgColor='rgba(255, 255, 255, 0.4)'
+				_hover={{ bg: 'rgba(255, 255, 255, 0.6)' }}
 				color='color.gris'
 				fontFamily='fonts.secundaria'
 				marginBottom={3}
@@ -130,7 +130,8 @@ const ModalPago = () => {
 							textAlign='center'
 						>
 							Tené en cuenta que tenés hasta el{' '}
-							<Text as='b'>Lunes 9 de enero</Text> para confirmar tu asistencia.
+							<Text as='b'>Viernes 13 de enero</Text> para confirmar tu
+							asistencia.
 						</Text>
 					</ModalBody>
 				</ModalContent>
