@@ -21,8 +21,8 @@ const Mensajes = () => {
 					<Button
 						leftIcon={<ChevronLeftIcon />}
 						boxShadow='md'
-						size='xs'
-						color='color.bordo'
+						size='sm'
+						color='color.gris'
 						fontFamily='fonts.secundaria'
 					>
 						Volver

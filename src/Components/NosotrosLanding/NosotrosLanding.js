@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heading, Flex, Avatar, useMediaQuery } from '@chakra-ui/react';
+import { Heading, Flex, Text, useMediaQuery, Image } from '@chakra-ui/react';
 
 const NosotrosLanding = () => {
 	const [isDesktop] = useMediaQuery('(min-width: 600px)');
@@ -7,80 +7,36 @@ const NosotrosLanding = () => {
 	return (
 		<Flex
 			h='100vh'
-			alignItems='center'
 			overflow='hidden'
+			w='100%'
 			flexDir='column'
+			alignItems='center'
 			justifyContent='center'
-			bgColor='color.gris'
+			bgImage='/assets/fondo.jpg'
+			bgSize='cover'
+			bgPos='bottom'
+			bgAttachment={isDesktop && 'fixed'}
 		>
-			<Flex
-				w={isDesktop ? '70vw' : '100vw'}
-				flexDir={isDesktop ? 'row' : 'column'}
-				justifyContent={isDesktop ? 'space-evenly' : 'center'}
-				alignItems='center'
-			>
-				<Flex
-					flexDir='column'
-					w={isDesktop ? '30vw' : '80vw'}
-					justifyContent='center'
-					alignItems='center'
-					marginBottom={10}
-					boxShadow='md'
-				>
-					<Avatar
-						h={isDesktop ? '200px' : '90px'}
-						w={isDesktop ? '200px' : '90px'}
-						src='/assets/nico.jpg'
-					/>
-					<Flex
-						bgColor='white'
-						w='100%'
-						h='160px'
-						alignItems='center'
-						justifyContent='center'
-						borderRadius={10}
-						marginTop='-45px'
-					>
-						<Heading
-							fontSize={isDesktop ? '5xl' : '4xl'}
-							fontFamily='fonts.primaria'
-							color='color.gris'
-						>
-							Nico
-						</Heading>
-					</Flex>
-				</Flex>
-				<Flex
-					flexDir='column'
-					w={isDesktop ? '30vw' : '80vw'}
-					justifyContent='center'
-					alignItems='center'
-					marginBottom={10}
-					boxShadow='md'
-				>
-					<Avatar
-						h={isDesktop ? '200px' : '90px'}
-						w={isDesktop ? '200px' : '90px'}
-						src='/assets/ro.jpg'
-					/>
-					<Flex
-						bgColor='white'
-						w='100%'
-						h='160px'
-						alignItems='center'
-						justifyContent='center'
-						borderRadius={10}
-						marginTop='-45px'
-					>
-						<Heading
-							fontSize={isDesktop ? '5xl' : '4xl'}
-							fontFamily='fonts.primaria'
-							color='color.gris'
-						>
-							Rocilda
-						</Heading>
-					</Flex>
-				</Flex>
+			<Flex flexDir='column' w='70%'>
+				<Heading fontFamily="fonts.primaria" fontWeight="medium" textAlign="center">Sobre nosotrxs</Heading>
+				<Image
+					src='/assets/CHP_16711.jpg'
+					filter='grayscale(100%)'
+					marginBottom={4}
+				/>
+				<Text marginBottom={4} fontFamily="fonts.secundaria" color="color.gris" as="i" fontSize="sm" textAlign="center">
+					Nos conocemos desde la secundaria, pero todo comenzó en 2018 con una
+					pregunta tirada al aire “¿Si fueses completamente libre qué harias?”.
+					Desde ese día los 80 km que nos separaban dejaron de existir entre
+					nosotrxs gracias a largas conversaciones, discusiones y una cosa llevó
+					a la otra...
+				</Text>
+				<Text fontFamily="fonts.secundaria" color="color.gris" as="i" fontSize="sm" textAlign="center">
+					En 2020 la pandemia nos terminó de juntar en un solo
+					lugar, uniendo dos caminos en uno solo para transitar la vida a la par
+					y cada dia que nos miramos a los ojos vemos en el otro un amor que nos
+					permite ser nosotrx mismxs.
+				</Text>
 			</Flex>
 		</Flex>
 	);

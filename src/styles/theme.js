@@ -4,7 +4,7 @@ import '@fontsource/quicksand';
 
 const colors = {
 	color: {
-		gris: '#36384C',
+		gris: '#111212',
 		bordo: '#613A43',
 		verde: '#849974',
 		rosita: '#E3BAB3',
