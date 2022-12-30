@@ -20,7 +20,7 @@ const HomeLanding = () => {
 			bgAttachment={isDesktop && 'fixed'}
 		>
 			<Flex
-				padding={isDesktop ? 10 : 20}
+				padding={isDesktop ? 20 : 20}
 				flexDir='column'
 				justifyContent='center'
 				alignItems='center'
